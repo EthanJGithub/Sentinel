@@ -29,6 +29,8 @@ services:
     environment:
       CATALOG_DB: "Host=db;Port=5432;Database=sentinel;Username=sentinel;Password=sentinel"
       SEED_DIR: /data/catalog
+      # shared HS256 secret so the C# service validates the same JWTs the agent issues
+      JWT_SECRET: "${JWT_SECRET:-sentinel-shared-demo-secret-change-me}"
     volumes:
       - ./data:/data:ro
     ports: ["8080:8080"]
@@ -53,6 +55,7 @@ services:
       CATALOG_URL: http://catalog:8080
       MCP_URL: http://mcp:7100
       DATABASE_URL: "postgresql://sentinel:sentinel@db:5432/sentinel"
+      JWT_SECRET: "${JWT_SECRET:-sentinel-shared-demo-secret-change-me}"
     volumes:
       - ./data:/data:ro
     ports: ["8000:8000"]

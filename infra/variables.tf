@@ -44,6 +44,12 @@ variable "services" {
   }
 }
 
+variable "cors_origins" {
+  description = "Explicit CORS allow-list for the agent API in production (no wildcard)."
+  type        = string
+  default     = "https://sentinel-console.vercel.app"
+}
+
 variable "tags" {
   type = map(string)
   default = {

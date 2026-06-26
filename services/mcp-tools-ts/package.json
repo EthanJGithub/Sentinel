@@ -9,7 +9,8 @@
     "mcp": "tsx src/mcpServer.ts",
     "http": "tsx src/httpServer.ts",
     "start": "node dist/httpServer.js",
-    "test": "tsx src/selftest.ts"
+    "test": "vitest run",
+    "test:smoke": "tsx src/selftest.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.4",
@@ -22,6 +23,7 @@
     "@types/express": "^4.17.21",
     "@types/node": "^20.17.10",
     "tsx": "^4.19.2",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
   }
 }

@@ -50,6 +50,13 @@ WS auth: token via `?token=` query (browsers can't set WS headers). Demo account
 on the login screen / in `.env.example`. Runs durably persist to Postgres
 (`app/persistence.py`: `plan_runs` + append-only `audit_records`) when `DATABASE_URL` is set.
 
+**Multi-tenancy:** every JWT/run/audit row carries `tenant_id`; reads are tenant-scoped
+(`_scope(user)` in `main.py`), `admin` (tenant `*`) is cross-tenant.
+**Observability:** `GET /metrics` (Prometheus), `GET /ready` (readiness), structured JSON
+logs, Langfuse export when keyed — `app/observability.py`.
+**C# service auth:** `POST /api/orders` requires an approver/admin JWT (policy
+`CanPlaceOrder`, shared `JWT_SECRET`); the agent forwards the approver's token on approval.
+
 ### Catalog & contract service — `services/catalog-csharp` (system of record)
 | Endpoint | Purpose |
 |---|---|

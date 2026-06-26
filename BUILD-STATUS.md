@@ -43,17 +43,23 @@ Ran `docker compose up --build` on the WSL2 Docker engine. All 5 containers came
 
 These were invisible to host runs — running the real Docker stack is exactly what exposed them.
 
-## Enterprise hardening added (2026-06-26)
-Closed the gaps from the enterprise sanity check:
-- **Auth + RBAC** — JWT (HS256) + PBKDF2-SHA256 hashing; roles operator < approver < admin.
-  `/approve` requires approver+ (verified: operator → 403, approver → ORDERED). Console has
-  a login screen + role-gated approve button + sign-out. (`app/auth.py`, `Login.tsx`)
-- **Durable persistence** — `plan_runs` + append-only `audit_records` to Postgres; in-memory
-  fallback offline. (`app/persistence.py`)
-- **EF migrations** — C# service is migration-managed (InitialCreate), not EnsureCreated.
-- **Security** — headers, per-IP rate limiting, configurable CORS.
-- **Tests** — 19-test pytest suite (compliance, RBAC, graph e2e) wired into CI.
-- **WCAG 2.1 AA** — all console text now ≥4.5:1 (verified in-browser).
+## Enterprise hardening — all gaps closed (2026-06-26), verified on the live stack
+Every yellow/red from the sanity check is now green:
+- **Auth + RBAC** — JWT (HS256) + PBKDF2-SHA256; operator < approver < admin. `/approve`
+  requires approver+, **independently re-validated by the C# service** (forwarded approver
+  JWT on `place_order`). Console: login + role-gated approve + sign-out.
+- **Multi-tenancy** — `tenant_id` in JWT/users/runs/audit; reads tenant-scoped; admin
+  cross-tenant. Verified: cedarwood sees 1, maplewood sees 1, admin sees both.
+- **Durable persistence** — `plan_runs` + append-only `audit_records` + `users` in Postgres.
+- **EF migrations** — InitialCreate; `MigrateAsync` (not EnsureCreated).
+- **Observability** — Prometheus `/metrics` (per-tenant/model counters), structured JSON
+  logs, real Langfuse export when keyed, `/ready` vs `/health`.
+- **Secrets** — `REQUIRE_STRONG_SECRETS` fail-fast; Terraform AWS Secrets Manager + ECS
+  secret injection (`terraform validate` ✅).
+- **Security/API** — headers, per-IP rate limit, configurable CORS, paginated search.
+- **Tests in CI** — pytest 23 (+2 integration skipped), xUnit 4, vitest 6, eval gate,
+  terraform validate.
+- **WCAG 2.1 AA** — all console text ≥4.5:1 (verified in-browser).
 
 ## The demo works right now (no keys, no Docker)
 ```bash

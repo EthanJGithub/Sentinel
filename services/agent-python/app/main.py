@@ -14,17 +14,29 @@ from collections import defaultdict, deque
 
 from fastapi import Depends, FastAPI, Request, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, PlainTextResponse
 
 from .auth import (User, create_token, current_user, get_user_store,
                    require_role, user_from_ws_token)
 from .config import get_settings
+from .observability import METRICS, get_exporter, log_event
 from .persistence import get_store
 from .runner import RUNS, approve_plan, get_run, run_plan
 from .schema import LoginRequest, PlanRequest, TokenResponse
 
 settings = get_settings()
-app = FastAPI(title="Sentinel — Agent Orchestration", version="0.2.0")
+app = FastAPI(title="Sentinel — Agent Orchestration", version="0.3.0")
+
+
+@app.on_event("startup")
+def _startup():
+    problems = settings.validate_secrets()
+    if problems:
+        # fail fast in production posture (REQUIRE_STRONG_SECRETS=true)
+        raise RuntimeError("insecure configuration: " + "; ".join(problems))
+    log_event("startup", persistence="postgres" if get_store().enabled else "in-memory",
+              langfuse=get_exporter().enabled, real_models=settings.has_anthropic,
+              require_strong_secrets=settings.require_strong_secrets)
 
 origins = ["*"] if settings.cors_origins.strip() == "*" else [o.strip() for o in settings.cors_origins.split(",")]
 app.add_middleware(CORSMiddleware, allow_origins=origins, allow_methods=["*"],
@@ -44,7 +56,7 @@ async def guard(request: Request, call_next):
     window = _hits[ip]
     while window and now - window[0] > 60:
         window.popleft()
-    if len(window) >= settings.rate_limit_per_min and request.url.path not in ("/health",):
+    if len(window) >= settings.rate_limit_per_min and request.url.path not in ("/health", "/ready", "/metrics"):
         return JSONResponse({"error": "rate limit exceeded"}, status_code=429)
     window.append(now)
 
@@ -65,7 +77,21 @@ def health():
             "real_models": settings.has_anthropic, "catalog": "remote" if settings.catalog_url else "local-json",
             "rag": "pgvector" if (settings.database_url and settings.has_openai) else "local-keyword",
             "persistence": "postgres" if get_store().enabled else "in-memory",
-            "auth": "jwt+rbac"}
+            "auth": "jwt+rbac", "multi_tenant": True,
+            "observability": {"metrics": "/metrics", "langfuse": get_exporter().enabled}}
+
+
+@app.get("/ready")
+def ready():
+    # readiness distinct from liveness: DB reachable if configured
+    ok = (not settings.database_url) or get_store().enabled
+    return JSONResponse({"ready": ok}, status_code=200 if ok else 503)
+
+
+@app.get("/metrics")
+def metrics():
+    # Prometheus scrape target (public by convention; no PHI in metrics)
+    return PlainTextResponse(METRICS.prometheus(), media_type="text/plain; version=0.0.4")
 
 
 @app.post("/auth/login", response_model=TokenResponse)
@@ -85,21 +111,29 @@ def me(user: User = Depends(current_user)):
     return user.public()
 
 
+def _scope(user: User):
+    """tenant scope for reads: None = cross-tenant (admin), else the user's tenant."""
+    return None if user.cross_tenant else user.tenant_id
+
+
 @app.post("/plan")
 async def plan(req: PlanRequest, user: User = Depends(require_role("operator"))):
-    result = await asyncio.to_thread(run_plan, req, None, user.email)
+    result = await asyncio.to_thread(run_plan, req, None, user.email, user.tenant_id)
     return json.loads(result.model_dump_json())
 
 
 @app.post("/approve/{plan_id}")
-def approve(plan_id: str, user: User = Depends(require_role("approver"))):
-    # RBAC: only an approver/admin may commit an order (the regulated HITL gate)
-    return approve_plan(plan_id, user.email)
+def approve(plan_id: str, request: Request, user: User = Depends(require_role("approver"))):
+    # RBAC: only an approver/admin may commit an order (the regulated HITL gate).
+    # Forward the approver's bearer so the C# system-of-record authorizes it too.
+    auth = request.headers.get("authorization", "")
+    bearer = auth[7:] if auth.lower().startswith("bearer ") else None
+    return approve_plan(plan_id, user.email, _scope(user), bearer, user.facility)
 
 
 @app.get("/runs/{plan_id}")
 def get_run_ep(plan_id: str, user: User = Depends(current_user)):
-    res = get_run(plan_id)
+    res = get_run(plan_id, _scope(user))
     return json.loads(res.model_dump_json()) if res else JSONResponse({"error": "unknown plan_id"}, status_code=404)
 
 
@@ -107,10 +141,12 @@ def get_run_ep(plan_id: str, user: User = Depends(current_user)):
 def list_runs(user: User = Depends(current_user)):
     store = get_store()
     if store.enabled:
-        return store.list_runs()
-    return [{"plan_id": p, "status": r.status, "violations": r.violations,
-             "abstentions": r.abstentions, "cost_usd": r.metrics.get("total_cost_usd")}
-            for p, r in RUNS.items()]
+        return store.list_runs(_scope(user))
+    scope = _scope(user)
+    return [{"plan_id": p, "tenant_id": r.metrics.get("tenant_id", "cedarwood"), "status": r.status,
+             "violations": r.violations, "abstentions": r.abstentions, "cost_usd": r.metrics.get("total_cost_usd")}
+            for p, r in RUNS.items()
+            if scope is None or r.metrics.get("tenant_id", "cedarwood") == scope]
 
 
 # ---------------------------------------------------------------------------
@@ -145,7 +181,7 @@ async def ws_plan(ws: WebSocket):
 
         drain_task = asyncio.create_task(drain())
         req = PlanRequest(**payload)
-        result = await asyncio.to_thread(run_plan, req, on_event, user.email)
+        result = await asyncio.to_thread(run_plan, req, on_event, user.email, user.tenant_id)
         await queue.put(None)
         await drain_task
         await ws.send_json({"type": "result", "result": json.loads(result.model_dump_json())})

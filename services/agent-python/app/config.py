@@ -6,6 +6,7 @@ from __future__ import annotations
 import os
 from functools import lru_cache
 from pathlib import Path
+from typing import ClassVar
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -49,6 +50,20 @@ class Settings(BaseSettings):
     jwt_ttl_seconds: int = int(os.getenv("JWT_TTL_SECONDS", "28800"))  # 8h
     cors_origins: str = os.getenv("CORS_ORIGINS", "*")
     rate_limit_per_min: int = int(os.getenv("RATE_LIMIT_PER_MIN", "120"))
+    # production secrets posture: when true, refuse to start with the default JWT
+    # secret or wildcard CORS (set in Terraform/ECS alongside Secrets Manager).
+    require_strong_secrets: bool = os.getenv("REQUIRE_STRONG_SECRETS", "false").lower() == "true"
+
+    DEFAULT_JWT_SECRET: ClassVar[str] = "dev-secret-change-me-in-prod"
+
+    def validate_secrets(self) -> list[str]:
+        problems: list[str] = []
+        if self.require_strong_secrets:
+            if self.jwt_secret == self.DEFAULT_JWT_SECRET or len(self.jwt_secret) < 24:
+                problems.append("JWT_SECRET must be a strong, non-default value (>=24 chars) in production")
+            if self.cors_origins.strip() == "*":
+                problems.append("CORS_ORIGINS must be an explicit allow-list in production")
+        return problems
 
     # --- data paths (DATA_DIR overrides for containers where data is mounted at /data) ---
     data_dir: Path = Path(os.getenv("DATA_DIR", str(REPO_ROOT / "data")))

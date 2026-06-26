@@ -82,19 +82,31 @@ cd ../../web/console-ts && npm install && npm run dev   # http://localhost:5173
   OpenAI for an independent grounding cross-check; free/heuristic fallback for dev/eval.
 
 ## Enterprise hardening
-Beyond the demo, Sentinel ships the production-shaping pieces:
-- **Auth + RBAC** — JWT bearer tokens (HS256), PBKDF2-SHA256 password hashing, three
+Beyond the demo, Sentinel ships the production-shaping pieces — all verified on the
+live `docker compose` stack:
+- **Auth + RBAC** — JWT (HS256) bearer tokens, PBKDF2-SHA256 password hashing, three
   roles (`operator` < `approver` < `admin`). The **approver gate is the regulated
   human-in-the-loop control**: only an approver/admin may place an order — enforced in
-  the API (`/approve` → 403 otherwise) *and* reflected in the UI. Demo accounts are on
-  the login screen.
-- **Durable persistence** — plan runs and an **append-only audit trail** are written to
-  Postgres (`plan_runs`, `audit_records`), surviving restarts; falls back to in-memory offline.
+  the agent API, **independently re-validated by the C# system-of-record** (it now
+  requires an approver JWT on `place_order`, forwarded by the agent), and reflected in
+  the UI. Demo accounts are on the login screen.
+- **Multi-tenancy** — every JWT, run, and audit record carries a `tenant_id`; reads are
+  tenant-scoped (a Cedarwood operator never sees Maplewood's runs); `admin` is
+  cross-tenant. Demonstrated with two facilities + an admin.
+- **Durable persistence** — runs + an **append-only audit trail** (one row per agent
+  node) + users in Postgres (`plan_runs`, `audit_records`, `users`); in-memory fallback offline.
 - **Schema migrations** — the C# service is **EF-migration-managed** (not `EnsureCreated`).
-- **API hardening** — security headers, per-IP rate limiting, configurable CORS, typed
-  schema validation end-to-end.
-- **Tests** — a `pytest` suite (19 tests: compliance rules, citation-or-abstain, graph
-  e2e, RBAC) plus the MCP tool self-test, both run in CI alongside the eval gate.
+- **Observability backend** — Prometheus `/metrics` (per-tenant/per-model counters),
+  structured JSON logs (CloudWatch/Loki-ingestable), real **Langfuse** trace export when
+  keys are set, plus `/ready` vs `/health`.
+- **Secrets management** — `REQUIRE_STRONG_SECRETS` makes the agent **fail fast** on the
+  default JWT secret / wildcard CORS; Terraform provisions **AWS Secrets Manager** and
+  injects the secret into ECS tasks (never in plaintext config).
+- **API hardening** — security headers, per-IP rate limiting, configurable CORS, paginated
+  catalog search (`X-Total-Count`), typed schema validation end-to-end.
+- **Tests in CI** — `pytest` (23: compliance, citation-or-abstain, graph e2e, RBAC,
+  multi-tenancy, metrics), **xUnit** (C# pricing/order), **vitest** (MCP tools), a
+  skippable cross-service integration test, plus the eval gate.
 
 ## Data — real, honestly framed
 - **42 CFR §483.90** (Physical Environment) — verbatim subsections, verified against eCFR.

@@ -1,7 +1,34 @@
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Sentinel.Catalog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// --- service-to-service auth: validate the same HS256 JWT the agent issues ---
+// Closes the hole where the system-of-record trusted any caller. place_order now
+// requires an approver/admin token (forwarded by the agent on HITL approval).
+var jwtSecret = Environment.GetEnvironmentVariable("JWT_SECRET") ?? "dev-secret-change-me-in-prod";
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(o =>
+    {
+        o.MapInboundClaims = false;  // keep JSON claim names ("role", "sub", "tenant_id")
+        o.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = false,
+            ValidateAudience = false,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSecret)),
+            RoleClaimType = "role",
+            NameClaimType = "sub",
+        };
+    });
+builder.Services.AddAuthorization(o =>
+    // read the raw "role" claim directly (avoids ASP.NET inbound claim-type remapping)
+    o.AddPolicy("CanPlaceOrder", p => p.RequireAssertion(ctx =>
+        ctx.User.FindFirst("role")?.Value is "approver" or "admin")));
 
 // --- Postgres connection (Neon in the cloud, local pg in docker-compose) ---
 // NB: an empty ConnectionStrings:Catalog in appsettings would otherwise win over the
@@ -16,6 +43,8 @@ builder.Services.AddCors(o => o.AddDefaultPolicy(p => p.AllowAnyOrigin().AllowAn
 
 var app = builder.Build();
 app.UseCors();
+app.UseAuthentication();
+app.UseAuthorization();
 app.UseSwagger();
 app.UseSwaggerUI();
 
@@ -42,8 +71,10 @@ using (var scope = app.Services.CreateScope())
 // ---------------------------------------------------------------------------
 app.MapGet("/health", () => Results.Ok(new { status = "ok", service = "catalog-csharp" }));
 
-// catalog_search: find candidate SKUs by free text / category / room
-app.MapGet("/api/catalog/search", async (CatalogDb db, string? query, string? category, string? room, int? limit) =>
+// catalog_search: find candidate SKUs by free text / category / room.
+// Paginated: limit + offset; total row count returned via X-Total-Count header.
+app.MapGet("/api/catalog/search", async (CatalogDb db, HttpResponse resp,
+    string? query, string? category, string? room, int? limit, int? offset) =>
 {
     var q = db.Products.Include(p => p.ContractPrices).AsQueryable();
     if (!string.IsNullOrWhiteSpace(category)) q = q.Where(p => p.Category == category);
@@ -53,7 +84,9 @@ app.MapGet("/api/catalog/search", async (CatalogDb db, string? query, string? ca
         q = q.Where(p => p.Name.ToLower().Contains(t) || p.Subcategory.ToLower().Contains(t)
                          || p.Category.ToLower().Contains(t) || p.Vendor.ToLower().Contains(t));
     }
-    var list = await q.Take(limit ?? 50).ToListAsync();
+    var total = await q.CountAsync();
+    resp.Headers["X-Total-Count"] = total.ToString();
+    var list = await q.OrderBy(p => p.ListPrice).Skip(offset ?? 0).Take(limit ?? 50).ToListAsync();
     if (!string.IsNullOrWhiteSpace(room))
         list = list.Where(p => p.ApplicableRooms.Contains(room)).ToList();
     return Results.Ok(list.Select(ProductDto.From));
@@ -120,7 +153,7 @@ app.MapPost("/api/orders", async (CatalogDb db, PlaceOrderRequest req) =>
     db.Orders.Add(order);
     await db.SaveChangesAsync();
     return Results.Ok(new { order.Id, order.Status, order.Total, lineCount = order.Lines.Count });
-});
+}).RequireAuthorization("CanPlaceOrder");
 
 app.MapGet("/api/orders/{id:guid}", async (CatalogDb db, Guid id) =>
 {

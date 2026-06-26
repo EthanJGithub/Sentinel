@@ -17,11 +17,13 @@ CREATE TABLE IF NOT EXISTS users (
   email         text PRIMARY KEY,
   name          text NOT NULL,
   role          text NOT NULL,
+  tenant_id     text NOT NULL DEFAULT 'cedarwood',
   facility      text NOT NULL DEFAULT '',
   password_hash text NOT NULL
 );
 CREATE TABLE IF NOT EXISTS plan_runs (
   plan_id     text PRIMARY KEY,
+  tenant_id   text NOT NULL DEFAULT 'cedarwood',
   user_email  text,
   status      text,
   violations  int,
@@ -32,6 +34,7 @@ CREATE TABLE IF NOT EXISTS plan_runs (
 );
 CREATE TABLE IF NOT EXISTS audit_records (
   id        bigserial PRIMARY KEY,
+  tenant_id text NOT NULL DEFAULT 'cedarwood',
   plan_id   text NOT NULL,
   seq       int  NOT NULL,
   agent     text NOT NULL,
@@ -39,6 +42,7 @@ CREATE TABLE IF NOT EXISTS audit_records (
   ts        timestamptz NOT NULL DEFAULT now()
 );
 CREATE INDEX IF NOT EXISTS audit_plan_idx ON audit_records(plan_id);
+CREATE INDEX IF NOT EXISTS plan_runs_tenant_idx ON plan_runs(tenant_id);
 """
 
 
@@ -68,9 +72,10 @@ class PgStore:
         with self._conn() as c:
             for u in users:
                 c.execute(
-                    """INSERT INTO users(email,name,role,facility,password_hash)
-                       VALUES(%s,%s,%s,%s,%s) ON CONFLICT (email) DO NOTHING""",
-                    (u["email"], u["name"], u["role"], u.get("facility", ""), u["password_hash"]),
+                    """INSERT INTO users(email,name,role,tenant_id,facility,password_hash)
+                       VALUES(%s,%s,%s,%s,%s,%s) ON CONFLICT (email) DO NOTHING""",
+                    (u["email"], u["name"], u["role"], u.get("tenant_id", "cedarwood"),
+                     u.get("facility", ""), u["password_hash"]),
                 )
             c.commit()
 
@@ -78,29 +83,30 @@ class PgStore:
         if not self.enabled:
             return []
         with self._conn() as c:
-            rows = c.execute("SELECT email,name,role,facility,password_hash FROM users").fetchall()
-        return [{"email": r[0], "name": r[1], "role": r[2], "facility": r[3], "password_hash": r[4]} for r in rows]
+            rows = c.execute("SELECT email,name,role,tenant_id,facility,password_hash FROM users").fetchall()
+        return [{"email": r[0], "name": r[1], "role": r[2], "tenant_id": r[3], "facility": r[4],
+                 "password_hash": r[5]} for r in rows]
 
     # ---- runs + audit ----
-    def save_run(self, result: dict, user_email: Optional[str]) -> None:
+    def save_run(self, result: dict, user_email: Optional[str], tenant_id: str = "cedarwood") -> None:
         if not self.enabled:
             return
         try:
             with self._conn() as c:
                 c.execute(
-                    """INSERT INTO plan_runs(plan_id,user_email,status,violations,abstentions,cost_usd,payload)
-                       VALUES(%s,%s,%s,%s,%s,%s,%s)
+                    """INSERT INTO plan_runs(plan_id,tenant_id,user_email,status,violations,abstentions,cost_usd,payload)
+                       VALUES(%s,%s,%s,%s,%s,%s,%s,%s)
                        ON CONFLICT (plan_id) DO UPDATE SET status=EXCLUDED.status, payload=EXCLUDED.payload""",
-                    (result["plan_id"], user_email, result["status"], result.get("violations", 0),
+                    (result["plan_id"], tenant_id, user_email, result["status"], result.get("violations", 0),
                      result.get("abstentions", 0), result.get("metrics", {}).get("total_cost_usd", 0),
                      json.dumps(result)),
                 )
-                # append-only audit trail
+                # append-only audit trail (tenant-scoped)
                 for seq, a in enumerate(result.get("audit", [])):
                     c.execute(
-                        "INSERT INTO audit_records(plan_id,seq,agent,decision,ts) VALUES(%s,%s,%s,%s,%s)",
-                        (result["plan_id"], seq, a.get("agent", "?"), json.dumps(a.get("decision", {})),
-                         a.get("ts")),
+                        "INSERT INTO audit_records(tenant_id,plan_id,seq,agent,decision,ts) VALUES(%s,%s,%s,%s,%s,%s)",
+                        (tenant_id, result["plan_id"], seq, a.get("agent", "?"),
+                         json.dumps(a.get("decision", {})), a.get("ts")),
                     )
                 c.commit()
         except Exception:
@@ -116,23 +122,34 @@ class PgStore:
         except Exception:
             pass
 
-    def load_run(self, plan_id: str) -> Optional[dict]:
+    def load_run(self, plan_id: str, tenant_id: Optional[str] = None) -> Optional[dict]:
+        """Returns the run only if it belongs to tenant_id (None = no scoping, e.g. admin)."""
         if not self.enabled:
             return None
         with self._conn() as c:
-            row = c.execute("SELECT payload FROM plan_runs WHERE plan_id=%s", (plan_id,)).fetchone()
+            if tenant_id is None:
+                row = c.execute("SELECT payload FROM plan_runs WHERE plan_id=%s", (plan_id,)).fetchone()
+            else:
+                row = c.execute("SELECT payload FROM plan_runs WHERE plan_id=%s AND tenant_id=%s",
+                                (plan_id, tenant_id)).fetchone()
         return row[0] if row else None
 
-    def list_runs(self, limit: int = 50) -> list[dict]:
+    def list_runs(self, tenant_id: Optional[str] = None, limit: int = 50) -> list[dict]:
         if not self.enabled:
             return []
         with self._conn() as c:
-            rows = c.execute(
-                """SELECT plan_id,user_email,status,violations,abstentions,cost_usd,created_at
-                   FROM plan_runs ORDER BY created_at DESC LIMIT %s""", (limit,)).fetchall()
-        return [{"plan_id": r[0], "user_email": r[1], "status": r[2], "violations": r[3],
-                 "abstentions": r[4], "cost_usd": float(r[5] or 0),
-                 "created_at": r[6].isoformat() if r[6] else None} for r in rows]
+            if tenant_id is None:  # admin / cross-tenant
+                rows = c.execute(
+                    """SELECT plan_id,tenant_id,user_email,status,violations,abstentions,cost_usd,created_at
+                       FROM plan_runs ORDER BY created_at DESC LIMIT %s""", (limit,)).fetchall()
+            else:
+                rows = c.execute(
+                    """SELECT plan_id,tenant_id,user_email,status,violations,abstentions,cost_usd,created_at
+                       FROM plan_runs WHERE tenant_id=%s ORDER BY created_at DESC LIMIT %s""",
+                    (tenant_id, limit)).fetchall()
+        return [{"plan_id": r[0], "tenant_id": r[1], "user_email": r[2], "status": r[3], "violations": r[4],
+                 "abstentions": r[5], "cost_usd": float(r[6] or 0),
+                 "created_at": r[7].isoformat() if r[7] else None} for r in rows]
 
 
 class NoopStore:
@@ -140,10 +157,10 @@ class NoopStore:
 
     def ensure_users(self, users): ...
     def load_users(self): return []
-    def save_run(self, result, user_email): ...
+    def save_run(self, result, user_email, tenant_id="cedarwood"): ...
     def update_status(self, plan_id, status): ...
-    def load_run(self, plan_id): return None
-    def list_runs(self, limit=50): return []
+    def load_run(self, plan_id, tenant_id=None): return None
+    def list_runs(self, tenant_id=None, limit=50): return []
 
 
 _store = None

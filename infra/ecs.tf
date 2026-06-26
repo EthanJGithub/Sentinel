@@ -84,8 +84,15 @@ resource "aws_ecs_task_definition" "svc" {
       { name = "DATA_DIR", value = "/data" },
       { name = "CATALOG_URL", value = "http://catalog.${local.name}.local:8080" },
       { name = "MCP_URL", value = "http://mcp.${local.name}.local:7100" },
+      { name = "REQUIRE_STRONG_SECRETS", value = "true" },
+      { name = "CORS_ORIGINS", value = var.cors_origins },
     ]
-    secrets = []
+    # injected from Secrets Manager at container start (never in plaintext task config)
+    secrets = [
+      { name = "JWT_SECRET", valueFrom = aws_secretsmanager_secret.jwt.arn },
+      { name = "ANTHROPIC_API_KEY", valueFrom = aws_secretsmanager_secret.anthropic.arn },
+      { name = "OPENAI_API_KEY", valueFrom = aws_secretsmanager_secret.openai.arn },
+    ]
     logConfiguration = {
       logDriver = "awslogs"
       options = {

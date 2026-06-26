@@ -58,18 +58,31 @@ class User:
     email: str
     name: str
     role: str
+    tenant_id: str = "cedarwood"
     facility: str = "Cedarwood Senior Living"
 
+    @property
+    def cross_tenant(self) -> bool:
+        # admins (tenant '*') see across tenants; everyone else is scoped to their own
+        return self.role == "admin" or self.tenant_id == "*"
+
     def public(self) -> dict:
-        return {"email": self.email, "name": self.name, "role": self.role, "facility": self.facility}
+        return {"email": self.email, "name": self.name, "role": self.role,
+                "tenant_id": self.tenant_id, "facility": self.facility}
 
 
-# Demo accounts (documented in README / shown on the login screen). Override with
-# SENTINEL_AUTH_USERS='[{"email","name","role","password"}]' in production.
+# Demo accounts (documented in README / shown on the login screen). Two tenants
+# demonstrate isolation; admin is cross-tenant. Override with
+# SENTINEL_AUTH_USERS='[{"email","name","role","tenant_id","facility","password"}]'.
 DEFAULT_USERS = [
-    {"email": "operator@cedarwood.health", "name": "Dana Ops", "role": "operator", "password": "Operator!2026"},
-    {"email": "approver@cedarwood.health", "name": "Avery Approver", "role": "approver", "password": "Approver!2026"},
-    {"email": "admin@sentinel.io", "name": "Sentinel Admin", "role": "admin", "password": "Admin!2026"},
+    {"email": "operator@cedarwood.health", "name": "Dana Ops", "role": "operator",
+     "tenant_id": "cedarwood", "facility": "Cedarwood Senior Living", "password": "Operator!2026"},
+    {"email": "approver@cedarwood.health", "name": "Avery Approver", "role": "approver",
+     "tenant_id": "cedarwood", "facility": "Cedarwood Senior Living", "password": "Approver!2026"},
+    {"email": "operator@maplewood.health", "name": "Morgan Maple", "role": "approver",
+     "tenant_id": "maplewood", "facility": "Maplewood Care Center", "password": "Maple!2026"},
+    {"email": "admin@sentinel.io", "name": "Sentinel Admin", "role": "admin",
+     "tenant_id": "*", "facility": "All facilities", "password": "Admin!2026"},
 ]
 
 
@@ -81,6 +94,7 @@ class UserStore:
         for u in seed:
             self._users[u["email"].lower()] = {
                 "email": u["email"], "name": u["name"], "role": u["role"],
+                "tenant_id": u.get("tenant_id", "cedarwood"),
                 "facility": u.get("facility", "Cedarwood Senior Living"),
                 "password_hash": u.get("password_hash") or hash_password(u["password"]),
             }
@@ -106,7 +120,8 @@ class UserStore:
         rec = self.get(email)
         if not rec or not verify_password(password, rec["password_hash"]):
             return None
-        return User(email=rec["email"], name=rec["name"], role=rec["role"], facility=rec["facility"])
+        return User(email=rec["email"], name=rec["name"], role=rec["role"],
+                    tenant_id=rec.get("tenant_id", "cedarwood"), facility=rec["facility"])
 
 
 _store: Optional[UserStore] = None
@@ -126,7 +141,8 @@ def create_token(user: User) -> str:
     s = get_settings()
     now = int(time.time())
     payload = {"sub": user.email, "name": user.name, "role": user.role,
-               "facility": user.facility, "iat": now, "exp": now + s.jwt_ttl_seconds}
+               "tenant_id": user.tenant_id, "facility": user.facility,
+               "iat": now, "exp": now + s.jwt_ttl_seconds}
     return jwt.encode(payload, s.jwt_secret, algorithm="HS256")
 
 
@@ -149,7 +165,7 @@ def _user_from_token(token: str) -> User:
     except Exception:
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, "invalid token")
     return User(email=claims["sub"], name=claims.get("name", ""), role=claims.get("role", "operator"),
-                facility=claims.get("facility", ""))
+                tenant_id=claims.get("tenant_id", "cedarwood"), facility=claims.get("facility", ""))
 
 
 def current_user(creds: Optional[HTTPAuthorizationCredentials] = Depends(_bearer)) -> User:

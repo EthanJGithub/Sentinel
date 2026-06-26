@@ -1,5 +1,5 @@
 # Sentinel — Eval Report
-_Generated 2026-06-26T16:39:20.457185+00:00_  ·  12 golden scenarios
+_Generated 2026-06-26T20:28:03.123917+00:00_  ·  12 golden scenarios
 
 **Gate: PASSED ✅**
 

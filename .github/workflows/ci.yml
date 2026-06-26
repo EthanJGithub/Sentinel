@@ -15,8 +15,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-dotnet@v4
         with: { dotnet-version: "9.0.x" }
-      - working-directory: services/catalog-csharp
+      - name: Build catalog service
+        working-directory: services/catalog-csharp
         run: dotnet build -c Release
+      - name: Unit tests (xUnit — pricing, order, attributes)
+        working-directory: services/catalog-tests
+        run: dotnet test
 
   mcp-tools-ts:
     runs-on: ubuntu-latest

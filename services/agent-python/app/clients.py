@@ -55,11 +55,13 @@ class CatalogClient:
             return self._local.substitutions(sku, limit)
         return self._get(f"/api/catalog/{sku}/substitutions", limit=limit)
 
-    def place_order(self, plan_id: str, facility: str, lines: list[dict]) -> dict:
+    def place_order(self, plan_id: str, facility: str, lines: list[dict],
+                    bearer: Optional[str] = None) -> dict:
         if self._local:
             return self._local.place_order(plan_id, facility, lines)
+        headers = {"Authorization": f"Bearer {bearer}"} if bearer else {}
         with httpx.Client(timeout=20) as c:
-            r = c.post(f"{self.base}/api/orders",
+            r = c.post(f"{self.base}/api/orders", headers=headers,
                        json={"planId": plan_id, "facilityName": facility, "lines": lines})
             r.raise_for_status()
             return r.json()
