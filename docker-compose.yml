@@ -1,0 +1,77 @@
+# ============================================================================
+# Sentinel — full local stack ($0). One command brings up the polyglot system:
+#   Postgres+pgvector · C# catalog service · TS MCP tools · Python agent · console
+#
+#   docker compose up --build
+#
+# With no API keys the agent runs on the heuristic provider + local keyword RAG
+# (everything still works). Add ANTHROPIC_API_KEY / OPENAI_API_KEY to .env to
+# light up the real model path for the demo run.
+# ============================================================================
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: sentinel
+      POSTGRES_PASSWORD: sentinel
+      POSTGRES_DB: sentinel
+    ports: ["5432:5432"]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sentinel"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+
+  catalog:
+    build: ./services/catalog-csharp
+    environment:
+      CATALOG_DB: "Host=db;Port=5432;Database=sentinel;Username=sentinel;Password=sentinel"
+      SEED_DIR: /data/catalog
+    volumes:
+      - ./data:/data:ro
+    ports: ["8080:8080"]
+    depends_on:
+      db:
+        condition: service_healthy
+
+  mcp:
+    build: ./services/mcp-tools-ts
+    environment:
+      DATA_DIR: /data
+      PORT: "7100"
+    volumes:
+      - ./data:/data:ro
+    ports: ["7100:7100"]
+
+  agent:
+    build: ./services/agent-python
+    env_file: [.env]
+    environment:
+      DATA_DIR: /data
+      CATALOG_URL: http://catalog:8080
+      MCP_URL: http://mcp:7100
+      DATABASE_URL: "postgresql://sentinel:sentinel@db:5432/sentinel"
+    volumes:
+      - ./data:/data:ro
+    ports: ["8000:8000"]
+    depends_on:
+      db:
+        condition: service_healthy
+      catalog:
+        condition: service_started
+      mcp:
+        condition: service_started
+
+  console:
+    build:
+      context: ./web/console-ts
+      args:
+        VITE_AGENT_URL: http://localhost:8000
+    ports: ["5173:80"]
+    depends_on:
+      - agent
+
+volumes:
+  pgdata:

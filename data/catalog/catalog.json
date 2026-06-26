@@ -1,0 +1,5596 @@
+[
+  {
+    "sku": "DS-RES-1001",
+    "name": "RestWell Long-Term Care Bed",
+    "category": "resident_bed",
+    "subcategory": "Long-Term Care Bed",
+    "vendor": "RestWell",
+    "unit": "each",
+    "list_price": 1830.83,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1002",
+    "name": "RestWell Memory-Care Bed",
+    "category": "resident_bed",
+    "subcategory": "Memory-Care Bed",
+    "vendor": "RestWell",
+    "unit": "each",
+    "list_price": 2395.07,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1003",
+    "name": "RestWell Long-Term Care Bed",
+    "category": "resident_bed",
+    "subcategory": "Long-Term Care Bed",
+    "vendor": "RestWell",
+    "unit": "each",
+    "list_price": 4577.52,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1004",
+    "name": "Stryker-equiv Bariatric Bed",
+    "category": "resident_bed",
+    "subcategory": "Bariatric Bed",
+    "vendor": "Stryker-equiv",
+    "unit": "each",
+    "list_price": 4330.8,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1005",
+    "name": "CareFrame Low Bed (Fall Mitigation)",
+    "category": "resident_bed",
+    "subcategory": "Low Bed (Fall Mitigation)",
+    "vendor": "CareFrame",
+    "unit": "each",
+    "list_price": 4936.38,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1006",
+    "name": "Invacare-equiv Long-Term Care Bed",
+    "category": "resident_bed",
+    "subcategory": "Long-Term Care Bed",
+    "vendor": "Invacare-equiv",
+    "unit": "each",
+    "list_price": 1956.96,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1007",
+    "name": "Stryker-equiv Memory-Care Bed",
+    "category": "resident_bed",
+    "subcategory": "Memory-Care Bed",
+    "vendor": "Stryker-equiv",
+    "unit": "each",
+    "list_price": 4458.22,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1008",
+    "name": "Stryker-equiv Memory-Care Bed",
+    "category": "resident_bed",
+    "subcategory": "Memory-Care Bed",
+    "vendor": "Stryker-equiv",
+    "unit": "each",
+    "list_price": 4183.69,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1009",
+    "name": "Stryker-equiv Memory-Care Bed",
+    "category": "resident_bed",
+    "subcategory": "Memory-Care Bed",
+    "vendor": "Stryker-equiv",
+    "unit": "each",
+    "list_price": 4124.98,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1010",
+    "name": "CareFrame Bariatric Bed",
+    "category": "resident_bed",
+    "subcategory": "Bariatric Bed",
+    "vendor": "CareFrame",
+    "unit": "each",
+    "list_price": 4610.2,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1011",
+    "name": "RestWell Bariatric Bed",
+    "category": "resident_bed",
+    "subcategory": "Bariatric Bed",
+    "vendor": "RestWell",
+    "unit": "each",
+    "list_price": 3925.42,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1012",
+    "name": "Invacare-equiv Bariatric Bed",
+    "category": "resident_bed",
+    "subcategory": "Bariatric Bed",
+    "vendor": "Invacare-equiv",
+    "unit": "each",
+    "list_price": 4541.09,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1013",
+    "name": "Invacare-equiv Low Bed (Fall Mitigation)",
+    "category": "resident_bed",
+    "subcategory": "Low Bed (Fall Mitigation)",
+    "vendor": "Invacare-equiv",
+    "unit": "each",
+    "list_price": 2812.42,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1014",
+    "name": "Invacare-equiv Memory-Care Bed",
+    "category": "resident_bed",
+    "subcategory": "Memory-Care Bed",
+    "vendor": "Invacare-equiv",
+    "unit": "each",
+    "list_price": 1993.72,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1015",
+    "name": "Stryker-equiv Long-Term Care Bed",
+    "category": "resident_bed",
+    "subcategory": "Long-Term Care Bed",
+    "vendor": "Stryker-equiv",
+    "unit": "each",
+    "list_price": 3013.39,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1016",
+    "name": "Stryker-equiv Bariatric Bed",
+    "category": "resident_bed",
+    "subcategory": "Bariatric Bed",
+    "vendor": "Stryker-equiv",
+    "unit": "each",
+    "list_price": 1953.46,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1017",
+    "name": "Stryker-equiv Bariatric Bed",
+    "category": "resident_bed",
+    "subcategory": "Bariatric Bed",
+    "vendor": "Stryker-equiv",
+    "unit": "each",
+    "list_price": 2305.95,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1018",
+    "name": "CareFrame Long-Term Care Bed",
+    "category": "resident_bed",
+    "subcategory": "Long-Term Care Bed",
+    "vendor": "CareFrame",
+    "unit": "each",
+    "list_price": 4236.96,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1019",
+    "name": "Stryker-equiv Memory-Care Bed",
+    "category": "resident_bed",
+    "subcategory": "Memory-Care Bed",
+    "vendor": "Stryker-equiv",
+    "unit": "each",
+    "list_price": 2471.1,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1020",
+    "name": "Invacare-equiv Bariatric Bed",
+    "category": "resident_bed",
+    "subcategory": "Bariatric Bed",
+    "vendor": "Invacare-equiv",
+    "unit": "each",
+    "list_price": 3936.14,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1021",
+    "name": "CareFrame Memory-Care Bed",
+    "category": "resident_bed",
+    "subcategory": "Memory-Care Bed",
+    "vendor": "CareFrame",
+    "unit": "each",
+    "list_price": 1936.97,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1022",
+    "name": "Stryker-equiv Low Bed (Fall Mitigation)",
+    "category": "resident_bed",
+    "subcategory": "Low Bed (Fall Mitigation)",
+    "vendor": "Stryker-equiv",
+    "unit": "each",
+    "list_price": 3011.9,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1023",
+    "name": "Invacare-equiv Low Bed (Fall Mitigation)",
+    "category": "resident_bed",
+    "subcategory": "Low Bed (Fall Mitigation)",
+    "vendor": "Invacare-equiv",
+    "unit": "each",
+    "list_price": 2232.32,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-RES-1024",
+    "name": "Stryker-equiv Long-Term Care Bed",
+    "category": "resident_bed",
+    "subcategory": "Long-Term Care Bed",
+    "vendor": "Stryker-equiv",
+    "unit": "each",
+    "list_price": 3324.0,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "adjustable_height": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1025",
+    "name": "RestWell Pressure-Redistribution Foam",
+    "category": "mattress",
+    "subcategory": "Pressure-Redistribution Foam",
+    "vendor": "RestWell",
+    "unit": "each",
+    "list_price": 608.8,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1026",
+    "name": "AirCare Pressure-Redistribution Foam",
+    "category": "mattress",
+    "subcategory": "Pressure-Redistribution Foam",
+    "vendor": "AirCare",
+    "unit": "each",
+    "list_price": 666.93,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1027",
+    "name": "MediCushion Low-Air-Loss",
+    "category": "mattress",
+    "subcategory": "Low-Air-Loss",
+    "vendor": "MediCushion",
+    "unit": "each",
+    "list_price": 1241.65,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1028",
+    "name": "AirCare Pressure-Redistribution Foam",
+    "category": "mattress",
+    "subcategory": "Pressure-Redistribution Foam",
+    "vendor": "AirCare",
+    "unit": "each",
+    "list_price": 1374.85,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1029",
+    "name": "MediCushion Standard Innerspring",
+    "category": "mattress",
+    "subcategory": "Standard Innerspring",
+    "vendor": "MediCushion",
+    "unit": "each",
+    "list_price": 354.49,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1030",
+    "name": "RestWell Pressure-Redistribution Foam",
+    "category": "mattress",
+    "subcategory": "Pressure-Redistribution Foam",
+    "vendor": "RestWell",
+    "unit": "each",
+    "list_price": 290.57,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1031",
+    "name": "AirCare Standard Innerspring",
+    "category": "mattress",
+    "subcategory": "Standard Innerspring",
+    "vendor": "AirCare",
+    "unit": "each",
+    "list_price": 1136.62,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1032",
+    "name": "RestWell Gel-Hybrid",
+    "category": "mattress",
+    "subcategory": "Gel-Hybrid",
+    "vendor": "RestWell",
+    "unit": "each",
+    "list_price": 632.25,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1033",
+    "name": "MediCushion Low-Air-Loss",
+    "category": "mattress",
+    "subcategory": "Low-Air-Loss",
+    "vendor": "MediCushion",
+    "unit": "each",
+    "list_price": 1284.06,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1034",
+    "name": "AirCare Gel-Hybrid",
+    "category": "mattress",
+    "subcategory": "Gel-Hybrid",
+    "vendor": "AirCare",
+    "unit": "each",
+    "list_price": 1280.21,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1035",
+    "name": "AirCare Pressure-Redistribution Foam",
+    "category": "mattress",
+    "subcategory": "Pressure-Redistribution Foam",
+    "vendor": "AirCare",
+    "unit": "each",
+    "list_price": 605.07,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1036",
+    "name": "RestWell Low-Air-Loss",
+    "category": "mattress",
+    "subcategory": "Low-Air-Loss",
+    "vendor": "RestWell",
+    "unit": "each",
+    "list_price": 1048.91,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1037",
+    "name": "AirCare Standard Innerspring",
+    "category": "mattress",
+    "subcategory": "Standard Innerspring",
+    "vendor": "AirCare",
+    "unit": "each",
+    "list_price": 1131.07,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1038",
+    "name": "AirCare Standard Innerspring",
+    "category": "mattress",
+    "subcategory": "Standard Innerspring",
+    "vendor": "AirCare",
+    "unit": "each",
+    "list_price": 1047.91,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1039",
+    "name": "AirCare Gel-Hybrid",
+    "category": "mattress",
+    "subcategory": "Gel-Hybrid",
+    "vendor": "AirCare",
+    "unit": "each",
+    "list_price": 546.01,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1040",
+    "name": "RestWell Pressure-Redistribution Foam",
+    "category": "mattress",
+    "subcategory": "Pressure-Redistribution Foam",
+    "vendor": "RestWell",
+    "unit": "each",
+    "list_price": 999.35,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1041",
+    "name": "RestWell Gel-Hybrid",
+    "category": "mattress",
+    "subcategory": "Gel-Hybrid",
+    "vendor": "RestWell",
+    "unit": "each",
+    "list_price": 930.64,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1042",
+    "name": "AirCare Low-Air-Loss",
+    "category": "mattress",
+    "subcategory": "Low-Air-Loss",
+    "vendor": "AirCare",
+    "unit": "each",
+    "list_price": 688.54,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1043",
+    "name": "AirCare Standard Innerspring",
+    "category": "mattress",
+    "subcategory": "Standard Innerspring",
+    "vendor": "AirCare",
+    "unit": "each",
+    "list_price": 552.74,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1044",
+    "name": "AirCare Standard Innerspring",
+    "category": "mattress",
+    "subcategory": "Standard Innerspring",
+    "vendor": "AirCare",
+    "unit": "each",
+    "list_price": 665.12,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1045",
+    "name": "RestWell Gel-Hybrid",
+    "category": "mattress",
+    "subcategory": "Gel-Hybrid",
+    "vendor": "RestWell",
+    "unit": "each",
+    "list_price": 1323.72,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1046",
+    "name": "MediCushion Pressure-Redistribution Foam",
+    "category": "mattress",
+    "subcategory": "Pressure-Redistribution Foam",
+    "vendor": "MediCushion",
+    "unit": "each",
+    "list_price": 334.22,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1047",
+    "name": "MediCushion Low-Air-Loss",
+    "category": "mattress",
+    "subcategory": "Low-Air-Loss",
+    "vendor": "MediCushion",
+    "unit": "each",
+    "list_price": 543.23,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MAT-1048",
+    "name": "MediCushion Pressure-Redistribution Foam",
+    "category": "mattress",
+    "subcategory": "Pressure-Redistribution Foam",
+    "vendor": "MediCushion",
+    "unit": "each",
+    "list_price": 867.71,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "fluid_proof_cover": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1049",
+    "name": "CareFrame Assist Bar (Half Rail)",
+    "category": "bed_rail",
+    "subcategory": "Assist Bar (Half Rail)",
+    "vendor": "CareFrame",
+    "unit": "pair",
+    "list_price": 321.21,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1050",
+    "name": "CareFrame Transfer Handle",
+    "category": "bed_rail",
+    "subcategory": "Transfer Handle",
+    "vendor": "CareFrame",
+    "unit": "pair",
+    "list_price": 105.86,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1051",
+    "name": "SafeAssist Quarter Rail",
+    "category": "bed_rail",
+    "subcategory": "Quarter Rail",
+    "vendor": "SafeAssist",
+    "unit": "pair",
+    "list_price": 99.97,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1052",
+    "name": "CareFrame Transfer Handle",
+    "category": "bed_rail",
+    "subcategory": "Transfer Handle",
+    "vendor": "CareFrame",
+    "unit": "pair",
+    "list_price": 200.68,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1053",
+    "name": "SafeAssist Quarter Rail",
+    "category": "bed_rail",
+    "subcategory": "Quarter Rail",
+    "vendor": "SafeAssist",
+    "unit": "pair",
+    "list_price": 216.73,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1054",
+    "name": "SafeAssist Assist Bar (Half Rail)",
+    "category": "bed_rail",
+    "subcategory": "Assist Bar (Half Rail)",
+    "vendor": "SafeAssist",
+    "unit": "pair",
+    "list_price": 336.62,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1055",
+    "name": "CareFrame Assist Bar (Half Rail)",
+    "category": "bed_rail",
+    "subcategory": "Assist Bar (Half Rail)",
+    "vendor": "CareFrame",
+    "unit": "pair",
+    "list_price": 283.18,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1056",
+    "name": "SafeAssist Quarter Rail",
+    "category": "bed_rail",
+    "subcategory": "Quarter Rail",
+    "vendor": "SafeAssist",
+    "unit": "pair",
+    "list_price": 270.98,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1057",
+    "name": "CareFrame Assist Bar (Half Rail)",
+    "category": "bed_rail",
+    "subcategory": "Assist Bar (Half Rail)",
+    "vendor": "CareFrame",
+    "unit": "pair",
+    "list_price": 222.27,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1058",
+    "name": "CareFrame Transfer Handle",
+    "category": "bed_rail",
+    "subcategory": "Transfer Handle",
+    "vendor": "CareFrame",
+    "unit": "pair",
+    "list_price": 297.5,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1059",
+    "name": "CareFrame Assist Bar (Half Rail)",
+    "category": "bed_rail",
+    "subcategory": "Assist Bar (Half Rail)",
+    "vendor": "CareFrame",
+    "unit": "pair",
+    "list_price": 325.86,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1060",
+    "name": "SafeAssist Assist Bar (Half Rail)",
+    "category": "bed_rail",
+    "subcategory": "Assist Bar (Half Rail)",
+    "vendor": "SafeAssist",
+    "unit": "pair",
+    "list_price": 99.27,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1061",
+    "name": "SafeAssist Quarter Rail",
+    "category": "bed_rail",
+    "subcategory": "Quarter Rail",
+    "vendor": "SafeAssist",
+    "unit": "pair",
+    "list_price": 316.74,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1062",
+    "name": "SafeAssist Quarter Rail",
+    "category": "bed_rail",
+    "subcategory": "Quarter Rail",
+    "vendor": "SafeAssist",
+    "unit": "pair",
+    "list_price": 313.27,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1063",
+    "name": "SafeAssist Assist Bar (Half Rail)",
+    "category": "bed_rail",
+    "subcategory": "Assist Bar (Half Rail)",
+    "vendor": "SafeAssist",
+    "unit": "pair",
+    "list_price": 332.58,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1064",
+    "name": "SafeAssist Assist Bar (Half Rail)",
+    "category": "bed_rail",
+    "subcategory": "Assist Bar (Half Rail)",
+    "vendor": "SafeAssist",
+    "unit": "pair",
+    "list_price": 225.64,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1065",
+    "name": "CareFrame Transfer Handle",
+    "category": "bed_rail",
+    "subcategory": "Transfer Handle",
+    "vendor": "CareFrame",
+    "unit": "pair",
+    "list_price": 181.36,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1066",
+    "name": "SafeAssist Quarter Rail",
+    "category": "bed_rail",
+    "subcategory": "Quarter Rail",
+    "vendor": "SafeAssist",
+    "unit": "pair",
+    "list_price": 177.32,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1067",
+    "name": "SafeAssist Assist Bar (Half Rail)",
+    "category": "bed_rail",
+    "subcategory": "Assist Bar (Half Rail)",
+    "vendor": "SafeAssist",
+    "unit": "pair",
+    "list_price": 208.14,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1068",
+    "name": "CareFrame Quarter Rail",
+    "category": "bed_rail",
+    "subcategory": "Quarter Rail",
+    "vendor": "CareFrame",
+    "unit": "pair",
+    "list_price": 277.78,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1069",
+    "name": "SafeAssist Transfer Handle",
+    "category": "bed_rail",
+    "subcategory": "Transfer Handle",
+    "vendor": "SafeAssist",
+    "unit": "pair",
+    "list_price": 340.69,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1070",
+    "name": "SafeAssist Transfer Handle",
+    "category": "bed_rail",
+    "subcategory": "Transfer Handle",
+    "vendor": "SafeAssist",
+    "unit": "pair",
+    "list_price": 247.09,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1071",
+    "name": "CareFrame Transfer Handle",
+    "category": "bed_rail",
+    "subcategory": "Transfer Handle",
+    "vendor": "CareFrame",
+    "unit": "pair",
+    "list_price": 313.86,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BED-1072",
+    "name": "SafeAssist Assist Bar (Half Rail)",
+    "category": "bed_rail",
+    "subcategory": "Assist Bar (Half Rail)",
+    "vendor": "SafeAssist",
+    "unit": "pair",
+    "list_price": 202.41,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": true,
+      "astm_f1858": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1073",
+    "name": "Rauland-equiv Pull-Cord Station",
+    "category": "nurse_call",
+    "subcategory": "Pull-Cord Station",
+    "vendor": "Rauland-equiv",
+    "unit": "each",
+    "list_price": 819.14,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1074",
+    "name": "TekTone-equiv Wireless Call Pendant",
+    "category": "nurse_call",
+    "subcategory": "Wireless Call Pendant",
+    "vendor": "TekTone-equiv",
+    "unit": "each",
+    "list_price": 877.37,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1075",
+    "name": "Rauland-equiv Bedside Call Station",
+    "category": "nurse_call",
+    "subcategory": "Bedside Call Station",
+    "vendor": "Rauland-equiv",
+    "unit": "each",
+    "list_price": 550.54,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1076",
+    "name": "Rauland-equiv Bedside Call Station",
+    "category": "nurse_call",
+    "subcategory": "Bedside Call Station",
+    "vendor": "Rauland-equiv",
+    "unit": "each",
+    "list_price": 703.88,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1077",
+    "name": "Ascom-equiv Wireless Call Pendant",
+    "category": "nurse_call",
+    "subcategory": "Wireless Call Pendant",
+    "vendor": "Ascom-equiv",
+    "unit": "each",
+    "list_price": 572.04,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1078",
+    "name": "Ascom-equiv Bedside Call Station",
+    "category": "nurse_call",
+    "subcategory": "Bedside Call Station",
+    "vendor": "Ascom-equiv",
+    "unit": "each",
+    "list_price": 242.33,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1079",
+    "name": "Rauland-equiv Pull-Cord Station",
+    "category": "nurse_call",
+    "subcategory": "Pull-Cord Station",
+    "vendor": "Rauland-equiv",
+    "unit": "each",
+    "list_price": 560.52,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1080",
+    "name": "TekTone-equiv Bedside Call Station",
+    "category": "nurse_call",
+    "subcategory": "Bedside Call Station",
+    "vendor": "TekTone-equiv",
+    "unit": "each",
+    "list_price": 352.9,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1081",
+    "name": "Rauland-equiv Wireless Call Pendant",
+    "category": "nurse_call",
+    "subcategory": "Wireless Call Pendant",
+    "vendor": "Rauland-equiv",
+    "unit": "each",
+    "list_price": 393.11,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1082",
+    "name": "Ascom-equiv Wireless Call Pendant",
+    "category": "nurse_call",
+    "subcategory": "Wireless Call Pendant",
+    "vendor": "Ascom-equiv",
+    "unit": "each",
+    "list_price": 217.78,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1083",
+    "name": "Ascom-equiv Pull-Cord Station",
+    "category": "nurse_call",
+    "subcategory": "Pull-Cord Station",
+    "vendor": "Ascom-equiv",
+    "unit": "each",
+    "list_price": 897.05,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1084",
+    "name": "Rauland-equiv Bedside Call Station",
+    "category": "nurse_call",
+    "subcategory": "Bedside Call Station",
+    "vendor": "Rauland-equiv",
+    "unit": "each",
+    "list_price": 397.21,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1085",
+    "name": "TekTone-equiv Bedside Call Station",
+    "category": "nurse_call",
+    "subcategory": "Bedside Call Station",
+    "vendor": "TekTone-equiv",
+    "unit": "each",
+    "list_price": 554.85,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1086",
+    "name": "Rauland-equiv Dome Light + Station",
+    "category": "nurse_call",
+    "subcategory": "Dome Light + Station",
+    "vendor": "Rauland-equiv",
+    "unit": "each",
+    "list_price": 881.18,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1087",
+    "name": "TekTone-equiv Wireless Call Pendant",
+    "category": "nurse_call",
+    "subcategory": "Wireless Call Pendant",
+    "vendor": "TekTone-equiv",
+    "unit": "each",
+    "list_price": 671.81,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1088",
+    "name": "TekTone-equiv Bedside Call Station",
+    "category": "nurse_call",
+    "subcategory": "Bedside Call Station",
+    "vendor": "TekTone-equiv",
+    "unit": "each",
+    "list_price": 691.01,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1089",
+    "name": "Rauland-equiv Dome Light + Station",
+    "category": "nurse_call",
+    "subcategory": "Dome Light + Station",
+    "vendor": "Rauland-equiv",
+    "unit": "each",
+    "list_price": 646.65,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1090",
+    "name": "Ascom-equiv Dome Light + Station",
+    "category": "nurse_call",
+    "subcategory": "Dome Light + Station",
+    "vendor": "Ascom-equiv",
+    "unit": "each",
+    "list_price": 666.4,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1091",
+    "name": "Ascom-equiv Bedside Call Station",
+    "category": "nurse_call",
+    "subcategory": "Bedside Call Station",
+    "vendor": "Ascom-equiv",
+    "unit": "each",
+    "list_price": 218.06,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1092",
+    "name": "Rauland-equiv Dome Light + Station",
+    "category": "nurse_call",
+    "subcategory": "Dome Light + Station",
+    "vendor": "Rauland-equiv",
+    "unit": "each",
+    "list_price": 238.49,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1093",
+    "name": "Rauland-equiv Pull-Cord Station",
+    "category": "nurse_call",
+    "subcategory": "Pull-Cord Station",
+    "vendor": "Rauland-equiv",
+    "unit": "each",
+    "list_price": 344.77,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1094",
+    "name": "Rauland-equiv Dome Light + Station",
+    "category": "nurse_call",
+    "subcategory": "Dome Light + Station",
+    "vendor": "Rauland-equiv",
+    "unit": "each",
+    "list_price": 622.69,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1095",
+    "name": "TekTone-equiv Bedside Call Station",
+    "category": "nurse_call",
+    "subcategory": "Bedside Call Station",
+    "vendor": "TekTone-equiv",
+    "unit": "each",
+    "list_price": 495.79,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1096",
+    "name": "TekTone-equiv Bedside Call Station",
+    "category": "nurse_call",
+    "subcategory": "Bedside Call Station",
+    "vendor": "TekTone-equiv",
+    "unit": "each",
+    "list_price": 201.81,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true,
+      "relays_to_staff": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1097",
+    "name": "Tarkett-equiv Slip-Resistant LVT",
+    "category": "flooring",
+    "subcategory": "Slip-Resistant LVT",
+    "vendor": "Tarkett-equiv",
+    "unit": "sq_ft",
+    "list_price": 7.25,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1098",
+    "name": "FloorSafe Carpet Tile (Low-Pile)",
+    "category": "flooring",
+    "subcategory": "Carpet Tile (Low-Pile)",
+    "vendor": "FloorSafe",
+    "unit": "sq_ft",
+    "list_price": 7.61,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1099",
+    "name": "FloorSafe Slip-Resistant LVT",
+    "category": "flooring",
+    "subcategory": "Slip-Resistant LVT",
+    "vendor": "FloorSafe",
+    "unit": "sq_ft",
+    "list_price": 3.58,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1100",
+    "name": "Tarkett-equiv Carpet Tile (Low-Pile)",
+    "category": "flooring",
+    "subcategory": "Carpet Tile (Low-Pile)",
+    "vendor": "Tarkett-equiv",
+    "unit": "sq_ft",
+    "list_price": 5.51,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1101",
+    "name": "FloorSafe Carpet Tile (Low-Pile)",
+    "category": "flooring",
+    "subcategory": "Carpet Tile (Low-Pile)",
+    "vendor": "FloorSafe",
+    "unit": "sq_ft",
+    "list_price": 5.36,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1102",
+    "name": "Tarkett-equiv Carpet Tile (Low-Pile)",
+    "category": "flooring",
+    "subcategory": "Carpet Tile (Low-Pile)",
+    "vendor": "Tarkett-equiv",
+    "unit": "sq_ft",
+    "list_price": 8.07,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1103",
+    "name": "FloorSafe Carpet Tile (Low-Pile)",
+    "category": "flooring",
+    "subcategory": "Carpet Tile (Low-Pile)",
+    "vendor": "FloorSafe",
+    "unit": "sq_ft",
+    "list_price": 6.97,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1104",
+    "name": "FloorSafe Resilient Sheet Vinyl",
+    "category": "flooring",
+    "subcategory": "Resilient Sheet Vinyl",
+    "vendor": "FloorSafe",
+    "unit": "sq_ft",
+    "list_price": 4.98,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1105",
+    "name": "FloorSafe Resilient Sheet Vinyl",
+    "category": "flooring",
+    "subcategory": "Resilient Sheet Vinyl",
+    "vendor": "FloorSafe",
+    "unit": "sq_ft",
+    "list_price": 7.64,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1106",
+    "name": "Tarkett-equiv Slip-Resistant LVT",
+    "category": "flooring",
+    "subcategory": "Slip-Resistant LVT",
+    "vendor": "Tarkett-equiv",
+    "unit": "sq_ft",
+    "list_price": 8.4,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1107",
+    "name": "Tarkett-equiv Carpet Tile (Low-Pile)",
+    "category": "flooring",
+    "subcategory": "Carpet Tile (Low-Pile)",
+    "vendor": "Tarkett-equiv",
+    "unit": "sq_ft",
+    "list_price": 7.32,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1108",
+    "name": "Tarkett-equiv Carpet Tile (Low-Pile)",
+    "category": "flooring",
+    "subcategory": "Carpet Tile (Low-Pile)",
+    "vendor": "Tarkett-equiv",
+    "unit": "sq_ft",
+    "list_price": 6.5,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1109",
+    "name": "Tarkett-equiv Resilient Sheet Vinyl",
+    "category": "flooring",
+    "subcategory": "Resilient Sheet Vinyl",
+    "vendor": "Tarkett-equiv",
+    "unit": "sq_ft",
+    "list_price": 6.06,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1110",
+    "name": "Tarkett-equiv Slip-Resistant LVT",
+    "category": "flooring",
+    "subcategory": "Slip-Resistant LVT",
+    "vendor": "Tarkett-equiv",
+    "unit": "sq_ft",
+    "list_price": 3.14,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1111",
+    "name": "Tarkett-equiv Resilient Sheet Vinyl",
+    "category": "flooring",
+    "subcategory": "Resilient Sheet Vinyl",
+    "vendor": "Tarkett-equiv",
+    "unit": "sq_ft",
+    "list_price": 4.55,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1112",
+    "name": "FloorSafe Resilient Sheet Vinyl",
+    "category": "flooring",
+    "subcategory": "Resilient Sheet Vinyl",
+    "vendor": "FloorSafe",
+    "unit": "sq_ft",
+    "list_price": 4.34,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1113",
+    "name": "FloorSafe Resilient Sheet Vinyl",
+    "category": "flooring",
+    "subcategory": "Resilient Sheet Vinyl",
+    "vendor": "FloorSafe",
+    "unit": "sq_ft",
+    "list_price": 5.24,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1114",
+    "name": "Tarkett-equiv Slip-Resistant LVT",
+    "category": "flooring",
+    "subcategory": "Slip-Resistant LVT",
+    "vendor": "Tarkett-equiv",
+    "unit": "sq_ft",
+    "list_price": 8.37,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1115",
+    "name": "Tarkett-equiv Carpet Tile (Low-Pile)",
+    "category": "flooring",
+    "subcategory": "Carpet Tile (Low-Pile)",
+    "vendor": "Tarkett-equiv",
+    "unit": "sq_ft",
+    "list_price": 7.37,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1116",
+    "name": "Tarkett-equiv Slip-Resistant LVT",
+    "category": "flooring",
+    "subcategory": "Slip-Resistant LVT",
+    "vendor": "Tarkett-equiv",
+    "unit": "sq_ft",
+    "list_price": 3.4,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1117",
+    "name": "FloorSafe Resilient Sheet Vinyl",
+    "category": "flooring",
+    "subcategory": "Resilient Sheet Vinyl",
+    "vendor": "FloorSafe",
+    "unit": "sq_ft",
+    "list_price": 6.06,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1118",
+    "name": "FloorSafe Slip-Resistant LVT",
+    "category": "flooring",
+    "subcategory": "Slip-Resistant LVT",
+    "vendor": "FloorSafe",
+    "unit": "sq_ft",
+    "list_price": 6.75,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1119",
+    "name": "FloorSafe Carpet Tile (Low-Pile)",
+    "category": "flooring",
+    "subcategory": "Carpet Tile (Low-Pile)",
+    "vendor": "FloorSafe",
+    "unit": "sq_ft",
+    "list_price": 4.56,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FLO-1120",
+    "name": "FloorSafe Slip-Resistant LVT",
+    "category": "flooring",
+    "subcategory": "Slip-Resistant LVT",
+    "vendor": "FloorSafe",
+    "unit": "sq_ft",
+    "list_price": 3.43,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "non_porous": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1121",
+    "name": "DoorTech Resident Room Door (Bed-Movement)",
+    "category": "casework_door",
+    "subcategory": "Resident Room Door (Bed-Movement)",
+    "vendor": "DoorTech",
+    "unit": "each",
+    "list_price": 411.02,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1122",
+    "name": "BuildRight Corridor Door (Latching)",
+    "category": "casework_door",
+    "subcategory": "Corridor Door (Latching)",
+    "vendor": "BuildRight",
+    "unit": "each",
+    "list_price": 905.89,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1123",
+    "name": "DoorTech Corridor Door (Latching)",
+    "category": "casework_door",
+    "subcategory": "Corridor Door (Latching)",
+    "vendor": "DoorTech",
+    "unit": "each",
+    "list_price": 1415.23,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1124",
+    "name": "DoorTech Bathroom Door",
+    "category": "casework_door",
+    "subcategory": "Bathroom Door",
+    "vendor": "DoorTech",
+    "unit": "each",
+    "list_price": 442.86,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1125",
+    "name": "BuildRight Bathroom Door",
+    "category": "casework_door",
+    "subcategory": "Bathroom Door",
+    "vendor": "BuildRight",
+    "unit": "each",
+    "list_price": 1415.18,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1126",
+    "name": "BuildRight Resident Room Door (Bed-Movement)",
+    "category": "casework_door",
+    "subcategory": "Resident Room Door (Bed-Movement)",
+    "vendor": "BuildRight",
+    "unit": "each",
+    "list_price": 1369.25,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1127",
+    "name": "BuildRight Resident Room Door (Bed-Movement)",
+    "category": "casework_door",
+    "subcategory": "Resident Room Door (Bed-Movement)",
+    "vendor": "BuildRight",
+    "unit": "each",
+    "list_price": 1142.44,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1128",
+    "name": "BuildRight Resident Room Door (Bed-Movement)",
+    "category": "casework_door",
+    "subcategory": "Resident Room Door (Bed-Movement)",
+    "vendor": "BuildRight",
+    "unit": "each",
+    "list_price": 526.92,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1129",
+    "name": "BuildRight Bathroom Door",
+    "category": "casework_door",
+    "subcategory": "Bathroom Door",
+    "vendor": "BuildRight",
+    "unit": "each",
+    "list_price": 1108.95,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1130",
+    "name": "DoorTech Bathroom Door",
+    "category": "casework_door",
+    "subcategory": "Bathroom Door",
+    "vendor": "DoorTech",
+    "unit": "each",
+    "list_price": 1370.02,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1131",
+    "name": "DoorTech Bathroom Door",
+    "category": "casework_door",
+    "subcategory": "Bathroom Door",
+    "vendor": "DoorTech",
+    "unit": "each",
+    "list_price": 1319.27,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1132",
+    "name": "BuildRight Resident Room Door (Bed-Movement)",
+    "category": "casework_door",
+    "subcategory": "Resident Room Door (Bed-Movement)",
+    "vendor": "BuildRight",
+    "unit": "each",
+    "list_price": 1009.11,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1133",
+    "name": "DoorTech Corridor Door (Latching)",
+    "category": "casework_door",
+    "subcategory": "Corridor Door (Latching)",
+    "vendor": "DoorTech",
+    "unit": "each",
+    "list_price": 1136.88,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1134",
+    "name": "DoorTech Corridor Door (Latching)",
+    "category": "casework_door",
+    "subcategory": "Corridor Door (Latching)",
+    "vendor": "DoorTech",
+    "unit": "each",
+    "list_price": 674.19,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1135",
+    "name": "DoorTech Resident Room Door (Bed-Movement)",
+    "category": "casework_door",
+    "subcategory": "Resident Room Door (Bed-Movement)",
+    "vendor": "DoorTech",
+    "unit": "each",
+    "list_price": 1000.05,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1136",
+    "name": "BuildRight Resident Room Door (Bed-Movement)",
+    "category": "casework_door",
+    "subcategory": "Resident Room Door (Bed-Movement)",
+    "vendor": "BuildRight",
+    "unit": "each",
+    "list_price": 1392.96,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1137",
+    "name": "DoorTech Bathroom Door",
+    "category": "casework_door",
+    "subcategory": "Bathroom Door",
+    "vendor": "DoorTech",
+    "unit": "each",
+    "list_price": 1263.93,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1138",
+    "name": "BuildRight Corridor Door (Latching)",
+    "category": "casework_door",
+    "subcategory": "Corridor Door (Latching)",
+    "vendor": "BuildRight",
+    "unit": "each",
+    "list_price": 1019.52,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1139",
+    "name": "DoorTech Corridor Door (Latching)",
+    "category": "casework_door",
+    "subcategory": "Corridor Door (Latching)",
+    "vendor": "DoorTech",
+    "unit": "each",
+    "list_price": 1208.16,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1140",
+    "name": "DoorTech Resident Room Door (Bed-Movement)",
+    "category": "casework_door",
+    "subcategory": "Resident Room Door (Bed-Movement)",
+    "vendor": "DoorTech",
+    "unit": "each",
+    "list_price": 1101.99,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1141",
+    "name": "DoorTech Resident Room Door (Bed-Movement)",
+    "category": "casework_door",
+    "subcategory": "Resident Room Door (Bed-Movement)",
+    "vendor": "DoorTech",
+    "unit": "each",
+    "list_price": 784.14,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1142",
+    "name": "DoorTech Bathroom Door",
+    "category": "casework_door",
+    "subcategory": "Bathroom Door",
+    "vendor": "DoorTech",
+    "unit": "each",
+    "list_price": 1041.66,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1143",
+    "name": "DoorTech Resident Room Door (Bed-Movement)",
+    "category": "casework_door",
+    "subcategory": "Resident Room Door (Bed-Movement)",
+    "vendor": "DoorTech",
+    "unit": "each",
+    "list_price": 762.28,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-CAS-1144",
+    "name": "DoorTech Bathroom Door",
+    "category": "casework_door",
+    "subcategory": "Bathroom Door",
+    "vendor": "DoorTech",
+    "unit": "each",
+    "list_price": 1186.37,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 44,
+      "positive_latching": true,
+      "self_closing": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1145",
+    "name": "ComfortLine Overbed Table",
+    "category": "furniture",
+    "subcategory": "Overbed Table",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 1130.21,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1146",
+    "name": "CareFurnish Wardrobe w/ Closet",
+    "category": "furniture",
+    "subcategory": "Wardrobe w/ Closet",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 312.94,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1147",
+    "name": "ComfortLine Resident Chair",
+    "category": "furniture",
+    "subcategory": "Resident Chair",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 300.35,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1148",
+    "name": "ComfortLine Nightstand",
+    "category": "furniture",
+    "subcategory": "Nightstand",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 1012.52,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1149",
+    "name": "ComfortLine Resident Chair",
+    "category": "furniture",
+    "subcategory": "Resident Chair",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 1185.35,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1150",
+    "name": "ComfortLine Nightstand",
+    "category": "furniture",
+    "subcategory": "Nightstand",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 1117.49,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1151",
+    "name": "CareFurnish Wardrobe w/ Closet",
+    "category": "furniture",
+    "subcategory": "Wardrobe w/ Closet",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 498.33,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1152",
+    "name": "ComfortLine Nightstand",
+    "category": "furniture",
+    "subcategory": "Nightstand",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 425.45,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1153",
+    "name": "ComfortLine Overbed Table",
+    "category": "furniture",
+    "subcategory": "Overbed Table",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 270.46,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1154",
+    "name": "ComfortLine Resident Chair",
+    "category": "furniture",
+    "subcategory": "Resident Chair",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 298.77,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1155",
+    "name": "CareFurnish Wardrobe w/ Closet",
+    "category": "furniture",
+    "subcategory": "Wardrobe w/ Closet",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 626.53,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1156",
+    "name": "CareFurnish Wardrobe w/ Closet",
+    "category": "furniture",
+    "subcategory": "Wardrobe w/ Closet",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 995.74,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1157",
+    "name": "ComfortLine Wardrobe w/ Closet",
+    "category": "furniture",
+    "subcategory": "Wardrobe w/ Closet",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 979.95,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1158",
+    "name": "ComfortLine Recliner (Wipeable)",
+    "category": "furniture",
+    "subcategory": "Recliner (Wipeable)",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 683.01,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1159",
+    "name": "ComfortLine Nightstand",
+    "category": "furniture",
+    "subcategory": "Nightstand",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 543.22,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1160",
+    "name": "CareFurnish Recliner (Wipeable)",
+    "category": "furniture",
+    "subcategory": "Recliner (Wipeable)",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 269.39,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1161",
+    "name": "CareFurnish Wardrobe w/ Closet",
+    "category": "furniture",
+    "subcategory": "Wardrobe w/ Closet",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 501.99,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1162",
+    "name": "ComfortLine Resident Chair",
+    "category": "furniture",
+    "subcategory": "Resident Chair",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 560.86,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1163",
+    "name": "CareFurnish Wardrobe w/ Closet",
+    "category": "furniture",
+    "subcategory": "Wardrobe w/ Closet",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 506.42,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1164",
+    "name": "ComfortLine Wardrobe w/ Closet",
+    "category": "furniture",
+    "subcategory": "Wardrobe w/ Closet",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 566.31,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1165",
+    "name": "ComfortLine Recliner (Wipeable)",
+    "category": "furniture",
+    "subcategory": "Recliner (Wipeable)",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 455.84,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1166",
+    "name": "CareFurnish Wardrobe w/ Closet",
+    "category": "furniture",
+    "subcategory": "Wardrobe w/ Closet",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 423.32,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1167",
+    "name": "ComfortLine Resident Chair",
+    "category": "furniture",
+    "subcategory": "Resident Chair",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 796.56,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FUR-1168",
+    "name": "CareFurnish Wardrobe w/ Closet",
+    "category": "furniture",
+    "subcategory": "Wardrobe w/ Closet",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 882.12,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "non_porous": true,
+      "individual_closet": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1169",
+    "name": "AquaCare ADA Grab Bar Set",
+    "category": "bathroom_safety",
+    "subcategory": "ADA Grab Bar Set",
+    "vendor": "AquaCare",
+    "unit": "each",
+    "list_price": 115.0,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1170",
+    "name": "SafeAssist Shower Chair",
+    "category": "bathroom_safety",
+    "subcategory": "Shower Chair",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 273.64,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1171",
+    "name": "AquaCare Raised Toilet Seat",
+    "category": "bathroom_safety",
+    "subcategory": "Raised Toilet Seat",
+    "vendor": "AquaCare",
+    "unit": "each",
+    "list_price": 297.05,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1172",
+    "name": "SafeAssist Bedside Commode",
+    "category": "bathroom_safety",
+    "subcategory": "Bedside Commode",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 102.58,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1173",
+    "name": "AquaCare Shower Chair",
+    "category": "bathroom_safety",
+    "subcategory": "Shower Chair",
+    "vendor": "AquaCare",
+    "unit": "each",
+    "list_price": 311.2,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1174",
+    "name": "SafeAssist Shower Chair",
+    "category": "bathroom_safety",
+    "subcategory": "Shower Chair",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 63.89,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1175",
+    "name": "SafeAssist Bedside Commode",
+    "category": "bathroom_safety",
+    "subcategory": "Bedside Commode",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 327.03,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1176",
+    "name": "AquaCare ADA Grab Bar Set",
+    "category": "bathroom_safety",
+    "subcategory": "ADA Grab Bar Set",
+    "vendor": "AquaCare",
+    "unit": "each",
+    "list_price": 233.7,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1177",
+    "name": "SafeAssist Bedside Commode",
+    "category": "bathroom_safety",
+    "subcategory": "Bedside Commode",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 99.7,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1178",
+    "name": "AquaCare Shower Chair",
+    "category": "bathroom_safety",
+    "subcategory": "Shower Chair",
+    "vendor": "AquaCare",
+    "unit": "each",
+    "list_price": 230.58,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1179",
+    "name": "AquaCare Bedside Commode",
+    "category": "bathroom_safety",
+    "subcategory": "Bedside Commode",
+    "vendor": "AquaCare",
+    "unit": "each",
+    "list_price": 311.93,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1180",
+    "name": "AquaCare ADA Grab Bar Set",
+    "category": "bathroom_safety",
+    "subcategory": "ADA Grab Bar Set",
+    "vendor": "AquaCare",
+    "unit": "each",
+    "list_price": 320.25,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1181",
+    "name": "SafeAssist Shower Chair",
+    "category": "bathroom_safety",
+    "subcategory": "Shower Chair",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 167.77,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1182",
+    "name": "SafeAssist Shower Chair",
+    "category": "bathroom_safety",
+    "subcategory": "Shower Chair",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 324.04,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1183",
+    "name": "SafeAssist Raised Toilet Seat",
+    "category": "bathroom_safety",
+    "subcategory": "Raised Toilet Seat",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 297.44,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1184",
+    "name": "SafeAssist Bedside Commode",
+    "category": "bathroom_safety",
+    "subcategory": "Bedside Commode",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 106.74,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1185",
+    "name": "SafeAssist Raised Toilet Seat",
+    "category": "bathroom_safety",
+    "subcategory": "Raised Toilet Seat",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 274.78,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1186",
+    "name": "SafeAssist Raised Toilet Seat",
+    "category": "bathroom_safety",
+    "subcategory": "Raised Toilet Seat",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 255.48,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1187",
+    "name": "AquaCare Bedside Commode",
+    "category": "bathroom_safety",
+    "subcategory": "Bedside Commode",
+    "vendor": "AquaCare",
+    "unit": "each",
+    "list_price": 393.49,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1188",
+    "name": "SafeAssist ADA Grab Bar Set",
+    "category": "bathroom_safety",
+    "subcategory": "ADA Grab Bar Set",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 117.75,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1189",
+    "name": "AquaCare Raised Toilet Seat",
+    "category": "bathroom_safety",
+    "subcategory": "Raised Toilet Seat",
+    "vendor": "AquaCare",
+    "unit": "each",
+    "list_price": 292.34,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1190",
+    "name": "SafeAssist Raised Toilet Seat",
+    "category": "bathroom_safety",
+    "subcategory": "Raised Toilet Seat",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 169.44,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1191",
+    "name": "AquaCare ADA Grab Bar Set",
+    "category": "bathroom_safety",
+    "subcategory": "ADA Grab Bar Set",
+    "vendor": "AquaCare",
+    "unit": "each",
+    "list_price": 204.12,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-BAT-1192",
+    "name": "SafeAssist ADA Grab Bar Set",
+    "category": "bathroom_safety",
+    "subcategory": "ADA Grab Bar Set",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 53.52,
+    "applicable_rooms": [
+      "bathroom"
+    ],
+    "attributes": {
+      "grab_bar_height_in": 34,
+      "slip_resistant": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1193",
+    "name": "GuardCare Low-Bed Conversion Kit",
+    "category": "fall_prevention",
+    "subcategory": "Low-Bed Conversion Kit",
+    "vendor": "GuardCare",
+    "unit": "each",
+    "list_price": 104.43,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1194",
+    "name": "SafeAssist Bedside Floor Mat",
+    "category": "fall_prevention",
+    "subcategory": "Bedside Floor Mat",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 64.4,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1195",
+    "name": "SafeAssist Bedside Floor Mat",
+    "category": "fall_prevention",
+    "subcategory": "Bedside Floor Mat",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 405.62,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1196",
+    "name": "GuardCare Bedside Floor Mat",
+    "category": "fall_prevention",
+    "subcategory": "Bedside Floor Mat",
+    "vendor": "GuardCare",
+    "unit": "each",
+    "list_price": 281.72,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1197",
+    "name": "SafeAssist Bedside Floor Mat",
+    "category": "fall_prevention",
+    "subcategory": "Bedside Floor Mat",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 533.29,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1198",
+    "name": "GuardCare Low-Bed Conversion Kit",
+    "category": "fall_prevention",
+    "subcategory": "Low-Bed Conversion Kit",
+    "vendor": "GuardCare",
+    "unit": "each",
+    "list_price": 568.28,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1199",
+    "name": "SafeAssist Bedside Floor Mat",
+    "category": "fall_prevention",
+    "subcategory": "Bedside Floor Mat",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 195.32,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1200",
+    "name": "GuardCare Bedside Floor Mat",
+    "category": "fall_prevention",
+    "subcategory": "Bedside Floor Mat",
+    "vendor": "GuardCare",
+    "unit": "each",
+    "list_price": 520.23,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1201",
+    "name": "GuardCare Low-Bed Conversion Kit",
+    "category": "fall_prevention",
+    "subcategory": "Low-Bed Conversion Kit",
+    "vendor": "GuardCare",
+    "unit": "each",
+    "list_price": 313.04,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1202",
+    "name": "GuardCare Bedside Floor Mat",
+    "category": "fall_prevention",
+    "subcategory": "Bedside Floor Mat",
+    "vendor": "GuardCare",
+    "unit": "each",
+    "list_price": 68.69,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1203",
+    "name": "SafeAssist Low-Bed Conversion Kit",
+    "category": "fall_prevention",
+    "subcategory": "Low-Bed Conversion Kit",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 153.45,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1204",
+    "name": "GuardCare Fall-Alert Sensor Pad",
+    "category": "fall_prevention",
+    "subcategory": "Fall-Alert Sensor Pad",
+    "vendor": "GuardCare",
+    "unit": "each",
+    "list_price": 334.07,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1205",
+    "name": "GuardCare Bedside Floor Mat",
+    "category": "fall_prevention",
+    "subcategory": "Bedside Floor Mat",
+    "vendor": "GuardCare",
+    "unit": "each",
+    "list_price": 227.23,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1206",
+    "name": "GuardCare Bedside Floor Mat",
+    "category": "fall_prevention",
+    "subcategory": "Bedside Floor Mat",
+    "vendor": "GuardCare",
+    "unit": "each",
+    "list_price": 274.23,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1207",
+    "name": "GuardCare Fall-Alert Sensor Pad",
+    "category": "fall_prevention",
+    "subcategory": "Fall-Alert Sensor Pad",
+    "vendor": "GuardCare",
+    "unit": "each",
+    "list_price": 283.7,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1208",
+    "name": "SafeAssist Low-Bed Conversion Kit",
+    "category": "fall_prevention",
+    "subcategory": "Low-Bed Conversion Kit",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 134.44,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1209",
+    "name": "SafeAssist Fall-Alert Sensor Pad",
+    "category": "fall_prevention",
+    "subcategory": "Fall-Alert Sensor Pad",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 124.56,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1210",
+    "name": "GuardCare Bedside Floor Mat",
+    "category": "fall_prevention",
+    "subcategory": "Bedside Floor Mat",
+    "vendor": "GuardCare",
+    "unit": "each",
+    "list_price": 541.85,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1211",
+    "name": "SafeAssist Bedside Floor Mat",
+    "category": "fall_prevention",
+    "subcategory": "Bedside Floor Mat",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 251.21,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1212",
+    "name": "SafeAssist Bedside Floor Mat",
+    "category": "fall_prevention",
+    "subcategory": "Bedside Floor Mat",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 358.9,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1213",
+    "name": "GuardCare Fall-Alert Sensor Pad",
+    "category": "fall_prevention",
+    "subcategory": "Fall-Alert Sensor Pad",
+    "vendor": "GuardCare",
+    "unit": "each",
+    "list_price": 542.78,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1214",
+    "name": "SafeAssist Bedside Floor Mat",
+    "category": "fall_prevention",
+    "subcategory": "Bedside Floor Mat",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 596.5,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1215",
+    "name": "SafeAssist Bedside Floor Mat",
+    "category": "fall_prevention",
+    "subcategory": "Bedside Floor Mat",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 83.7,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-FAL-1216",
+    "name": "SafeAssist Bedside Floor Mat",
+    "category": "fall_prevention",
+    "subcategory": "Bedside Floor Mat",
+    "vendor": "SafeAssist",
+    "unit": "each",
+    "list_price": 148.12,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "slip_resistant": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1217",
+    "name": "Hoyer-equiv Sit-to-Stand Lift",
+    "category": "mobility",
+    "subcategory": "Sit-to-Stand Lift",
+    "vendor": "Hoyer-equiv",
+    "unit": "each",
+    "list_price": 820.16,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1218",
+    "name": "Hoyer-equiv Rollator Walker",
+    "category": "mobility",
+    "subcategory": "Rollator Walker",
+    "vendor": "Hoyer-equiv",
+    "unit": "each",
+    "list_price": 6415.31,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1219",
+    "name": "Drive-equiv Rollator Walker",
+    "category": "mobility",
+    "subcategory": "Rollator Walker",
+    "vendor": "Drive-equiv",
+    "unit": "each",
+    "list_price": 1453.59,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1220",
+    "name": "Hoyer-equiv Ceiling Lift",
+    "category": "mobility",
+    "subcategory": "Ceiling Lift",
+    "vendor": "Hoyer-equiv",
+    "unit": "each",
+    "list_price": 5979.66,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1221",
+    "name": "Invacare-equiv Wheelchair (Transport)",
+    "category": "mobility",
+    "subcategory": "Wheelchair (Transport)",
+    "vendor": "Invacare-equiv",
+    "unit": "each",
+    "list_price": 1947.41,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1222",
+    "name": "Drive-equiv Wheelchair (Transport)",
+    "category": "mobility",
+    "subcategory": "Wheelchair (Transport)",
+    "vendor": "Drive-equiv",
+    "unit": "each",
+    "list_price": 4617.12,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1223",
+    "name": "Drive-equiv Wheelchair (Transport)",
+    "category": "mobility",
+    "subcategory": "Wheelchair (Transport)",
+    "vendor": "Drive-equiv",
+    "unit": "each",
+    "list_price": 5102.23,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1224",
+    "name": "Hoyer-equiv Wheelchair (Transport)",
+    "category": "mobility",
+    "subcategory": "Wheelchair (Transport)",
+    "vendor": "Hoyer-equiv",
+    "unit": "each",
+    "list_price": 1710.79,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1225",
+    "name": "Hoyer-equiv Ceiling Lift",
+    "category": "mobility",
+    "subcategory": "Ceiling Lift",
+    "vendor": "Hoyer-equiv",
+    "unit": "each",
+    "list_price": 852.99,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1226",
+    "name": "Hoyer-equiv Wheelchair (Transport)",
+    "category": "mobility",
+    "subcategory": "Wheelchair (Transport)",
+    "vendor": "Hoyer-equiv",
+    "unit": "each",
+    "list_price": 4999.05,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1227",
+    "name": "Hoyer-equiv Rollator Walker",
+    "category": "mobility",
+    "subcategory": "Rollator Walker",
+    "vendor": "Hoyer-equiv",
+    "unit": "each",
+    "list_price": 1406.29,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1228",
+    "name": "Drive-equiv Ceiling Lift",
+    "category": "mobility",
+    "subcategory": "Ceiling Lift",
+    "vendor": "Drive-equiv",
+    "unit": "each",
+    "list_price": 6582.88,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1229",
+    "name": "Drive-equiv Wheelchair (Transport)",
+    "category": "mobility",
+    "subcategory": "Wheelchair (Transport)",
+    "vendor": "Drive-equiv",
+    "unit": "each",
+    "list_price": 2819.59,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1230",
+    "name": "Drive-equiv Sit-to-Stand Lift",
+    "category": "mobility",
+    "subcategory": "Sit-to-Stand Lift",
+    "vendor": "Drive-equiv",
+    "unit": "each",
+    "list_price": 6264.83,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1231",
+    "name": "Invacare-equiv Ceiling Lift",
+    "category": "mobility",
+    "subcategory": "Ceiling Lift",
+    "vendor": "Invacare-equiv",
+    "unit": "each",
+    "list_price": 4327.32,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1232",
+    "name": "Hoyer-equiv Sit-to-Stand Lift",
+    "category": "mobility",
+    "subcategory": "Sit-to-Stand Lift",
+    "vendor": "Hoyer-equiv",
+    "unit": "each",
+    "list_price": 614.93,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1233",
+    "name": "Drive-equiv Sit-to-Stand Lift",
+    "category": "mobility",
+    "subcategory": "Sit-to-Stand Lift",
+    "vendor": "Drive-equiv",
+    "unit": "each",
+    "list_price": 2783.61,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1234",
+    "name": "Drive-equiv Ceiling Lift",
+    "category": "mobility",
+    "subcategory": "Ceiling Lift",
+    "vendor": "Drive-equiv",
+    "unit": "each",
+    "list_price": 3198.15,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1235",
+    "name": "Invacare-equiv Rollator Walker",
+    "category": "mobility",
+    "subcategory": "Rollator Walker",
+    "vendor": "Invacare-equiv",
+    "unit": "each",
+    "list_price": 4394.43,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1236",
+    "name": "Hoyer-equiv Ceiling Lift",
+    "category": "mobility",
+    "subcategory": "Ceiling Lift",
+    "vendor": "Hoyer-equiv",
+    "unit": "each",
+    "list_price": 4539.15,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1237",
+    "name": "Drive-equiv Sit-to-Stand Lift",
+    "category": "mobility",
+    "subcategory": "Sit-to-Stand Lift",
+    "vendor": "Drive-equiv",
+    "unit": "each",
+    "list_price": 2801.13,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1238",
+    "name": "Invacare-equiv Sit-to-Stand Lift",
+    "category": "mobility",
+    "subcategory": "Sit-to-Stand Lift",
+    "vendor": "Invacare-equiv",
+    "unit": "each",
+    "list_price": 3247.82,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1239",
+    "name": "Invacare-equiv Rollator Walker",
+    "category": "mobility",
+    "subcategory": "Rollator Walker",
+    "vendor": "Invacare-equiv",
+    "unit": "each",
+    "list_price": 5614.98,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-MOB-1240",
+    "name": "Invacare-equiv Ceiling Lift",
+    "category": "mobility",
+    "subcategory": "Ceiling Lift",
+    "vendor": "Invacare-equiv",
+    "unit": "each",
+    "list_price": 434.34,
+    "applicable_rooms": [
+      "resident_room",
+      "common_area"
+    ],
+    "attributes": {
+      "weight_capacity_lb": 400,
+      "cleanable_surface": true
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1241",
+    "name": "CareFurnish Lounge Seating",
+    "category": "common_area",
+    "subcategory": "Lounge Seating",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 1951.83,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1242",
+    "name": "ComfortLine Lounge Seating",
+    "category": "common_area",
+    "subcategory": "Lounge Seating",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 1227.45,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1243",
+    "name": "ComfortLine Dining Table (Wheelchair-Height)",
+    "category": "common_area",
+    "subcategory": "Dining Table (Wheelchair-Height)",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 2117.38,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1244",
+    "name": "ComfortLine Wall TV + Mount",
+    "category": "common_area",
+    "subcategory": "Wall TV + Mount",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 1244.22,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1245",
+    "name": "ComfortLine Activity Table",
+    "category": "common_area",
+    "subcategory": "Activity Table",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 1181.27,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1246",
+    "name": "ComfortLine Wall TV + Mount",
+    "category": "common_area",
+    "subcategory": "Wall TV + Mount",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 881.24,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1247",
+    "name": "CareFurnish Wall TV + Mount",
+    "category": "common_area",
+    "subcategory": "Wall TV + Mount",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 935.73,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1248",
+    "name": "CareFurnish Wall TV + Mount",
+    "category": "common_area",
+    "subcategory": "Wall TV + Mount",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 957.58,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1249",
+    "name": "CareFurnish Activity Table",
+    "category": "common_area",
+    "subcategory": "Activity Table",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 2011.17,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1250",
+    "name": "CareFurnish Dining Table (Wheelchair-Height)",
+    "category": "common_area",
+    "subcategory": "Dining Table (Wheelchair-Height)",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 2143.5,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1251",
+    "name": "ComfortLine Activity Table",
+    "category": "common_area",
+    "subcategory": "Activity Table",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 2157.07,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1252",
+    "name": "ComfortLine Wall TV + Mount",
+    "category": "common_area",
+    "subcategory": "Wall TV + Mount",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 2223.37,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1253",
+    "name": "ComfortLine Wall TV + Mount",
+    "category": "common_area",
+    "subcategory": "Wall TV + Mount",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 880.32,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1254",
+    "name": "CareFurnish Activity Table",
+    "category": "common_area",
+    "subcategory": "Activity Table",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 1516.0,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1255",
+    "name": "ComfortLine Lounge Seating",
+    "category": "common_area",
+    "subcategory": "Lounge Seating",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 572.03,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1256",
+    "name": "ComfortLine Wall TV + Mount",
+    "category": "common_area",
+    "subcategory": "Wall TV + Mount",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 274.02,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1257",
+    "name": "ComfortLine Dining Table (Wheelchair-Height)",
+    "category": "common_area",
+    "subcategory": "Dining Table (Wheelchair-Height)",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 1601.41,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1258",
+    "name": "ComfortLine Wall TV + Mount",
+    "category": "common_area",
+    "subcategory": "Wall TV + Mount",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 1369.85,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1259",
+    "name": "CareFurnish Activity Table",
+    "category": "common_area",
+    "subcategory": "Activity Table",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 491.43,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1260",
+    "name": "CareFurnish Wall TV + Mount",
+    "category": "common_area",
+    "subcategory": "Wall TV + Mount",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 2007.31,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1261",
+    "name": "CareFurnish Dining Table (Wheelchair-Height)",
+    "category": "common_area",
+    "subcategory": "Dining Table (Wheelchair-Height)",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 268.04,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1262",
+    "name": "CareFurnish Activity Table",
+    "category": "common_area",
+    "subcategory": "Activity Table",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 2043.92,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1263",
+    "name": "ComfortLine Wall TV + Mount",
+    "category": "common_area",
+    "subcategory": "Wall TV + Mount",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 2160.92,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-COM-1264",
+    "name": "CareFurnish Activity Table",
+    "category": "common_area",
+    "subcategory": "Activity Table",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 549.52,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": true,
+      "wheelchair_accessible": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1265",
+    "name": "MedTech Vitals Monitor",
+    "category": "nursing_station",
+    "subcategory": "Vitals Monitor",
+    "vendor": "MedTech",
+    "unit": "each",
+    "list_price": 2372.59,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1266",
+    "name": "CareFurnish Clinical Workstation",
+    "category": "nursing_station",
+    "subcategory": "Clinical Workstation",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 1826.61,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1267",
+    "name": "MedTech Medication Cart (Locking)",
+    "category": "nursing_station",
+    "subcategory": "Medication Cart (Locking)",
+    "vendor": "MedTech",
+    "unit": "each",
+    "list_price": 965.21,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1268",
+    "name": "MedTech Documentation Cart",
+    "category": "nursing_station",
+    "subcategory": "Documentation Cart",
+    "vendor": "MedTech",
+    "unit": "each",
+    "list_price": 3059.77,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1269",
+    "name": "MedTech Medication Cart (Locking)",
+    "category": "nursing_station",
+    "subcategory": "Medication Cart (Locking)",
+    "vendor": "MedTech",
+    "unit": "each",
+    "list_price": 2650.49,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1270",
+    "name": "MedTech Documentation Cart",
+    "category": "nursing_station",
+    "subcategory": "Documentation Cart",
+    "vendor": "MedTech",
+    "unit": "each",
+    "list_price": 2573.47,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1271",
+    "name": "CareFurnish Documentation Cart",
+    "category": "nursing_station",
+    "subcategory": "Documentation Cart",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 1003.13,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1272",
+    "name": "MedTech Medication Cart (Locking)",
+    "category": "nursing_station",
+    "subcategory": "Medication Cart (Locking)",
+    "vendor": "MedTech",
+    "unit": "each",
+    "list_price": 1292.69,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1273",
+    "name": "CareFurnish Medication Cart (Locking)",
+    "category": "nursing_station",
+    "subcategory": "Medication Cart (Locking)",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 2737.91,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1274",
+    "name": "MedTech Medication Cart (Locking)",
+    "category": "nursing_station",
+    "subcategory": "Medication Cart (Locking)",
+    "vendor": "MedTech",
+    "unit": "each",
+    "list_price": 2535.93,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1275",
+    "name": "CareFurnish Documentation Cart",
+    "category": "nursing_station",
+    "subcategory": "Documentation Cart",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 2146.35,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1276",
+    "name": "CareFurnish Medication Cart (Locking)",
+    "category": "nursing_station",
+    "subcategory": "Medication Cart (Locking)",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 1276.63,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1277",
+    "name": "CareFurnish Clinical Workstation",
+    "category": "nursing_station",
+    "subcategory": "Clinical Workstation",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 3663.83,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1278",
+    "name": "MedTech Clinical Workstation",
+    "category": "nursing_station",
+    "subcategory": "Clinical Workstation",
+    "vendor": "MedTech",
+    "unit": "each",
+    "list_price": 3427.16,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1279",
+    "name": "MedTech Clinical Workstation",
+    "category": "nursing_station",
+    "subcategory": "Clinical Workstation",
+    "vendor": "MedTech",
+    "unit": "each",
+    "list_price": 2928.95,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1280",
+    "name": "CareFurnish Documentation Cart",
+    "category": "nursing_station",
+    "subcategory": "Documentation Cart",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 3514.26,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1281",
+    "name": "MedTech Clinical Workstation",
+    "category": "nursing_station",
+    "subcategory": "Clinical Workstation",
+    "vendor": "MedTech",
+    "unit": "each",
+    "list_price": 2684.13,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 600
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1282",
+    "name": "CareFurnish Clinical Workstation",
+    "category": "nursing_station",
+    "subcategory": "Clinical Workstation",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 1719.79,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1283",
+    "name": "CareFurnish Medication Cart (Locking)",
+    "category": "nursing_station",
+    "subcategory": "Medication Cart (Locking)",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 3962.57,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1284",
+    "name": "MedTech Vitals Monitor",
+    "category": "nursing_station",
+    "subcategory": "Vitals Monitor",
+    "vendor": "MedTech",
+    "unit": "each",
+    "list_price": 1217.49,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1285",
+    "name": "MedTech Clinical Workstation",
+    "category": "nursing_station",
+    "subcategory": "Clinical Workstation",
+    "vendor": "MedTech",
+    "unit": "each",
+    "list_price": 3937.81,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1286",
+    "name": "CareFurnish Clinical Workstation",
+    "category": "nursing_station",
+    "subcategory": "Clinical Workstation",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 2873.41,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 400
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1287",
+    "name": "CareFurnish Documentation Cart",
+    "category": "nursing_station",
+    "subcategory": "Documentation Cart",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 725.15,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 300
+    },
+    "compliant": true
+  },
+  {
+    "sku": "DS-NUR-1288",
+    "name": "CareFurnish Medication Cart (Locking)",
+    "category": "nursing_station",
+    "subcategory": "Medication Cart (Locking)",
+    "vendor": "CareFurnish",
+    "unit": "each",
+    "list_price": 1222.71,
+    "applicable_rooms": [
+      "nursing_station"
+    ],
+    "attributes": {
+      "lockable": true,
+      "cleanable_surface": true,
+      "weight_capacity_lb": 350
+    },
+    "compliant": true
+  },
+  {
+    "sku": "TRAP-NC-001",
+    "name": "ValueCall Bedside-Only Call Station",
+    "category": "nurse_call",
+    "subcategory": "Bedside Call Station",
+    "vendor": "BudgetMed",
+    "unit": "each",
+    "list_price": 110.0,
+    "applicable_rooms": [
+      "resident_room",
+      "bathroom"
+    ],
+    "attributes": {
+      "covers_bedside": true,
+      "covers_toilet_bath": false,
+      "relays_to_staff": true
+    },
+    "compliant": false,
+    "known_violation": {
+      "rule_id": "call_system_coverage",
+      "citation": "42 CFR \u00a7483.90(g)",
+      "reason": "Call station does not extend to toilet and bathing facilities as required."
+    }
+  },
+  {
+    "sku": "TRAP-NC-002",
+    "name": "BuildRight 36\" Resident Room Door",
+    "category": "casework_door",
+    "subcategory": "Resident Room Door (Bed-Movement)",
+    "vendor": "BuildRight",
+    "unit": "each",
+    "list_price": 340.0,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom"
+    ],
+    "attributes": {
+      "clear_width_in": 36,
+      "positive_latching": true,
+      "self_closing": true
+    },
+    "compliant": false,
+    "known_violation": {
+      "rule_id": "egress_door_clear_width",
+      "citation": "NFPA 101 (2012) \u00a718.2.3.6",
+      "reason": "Clear width 36 in is below the 41.5 in required for bed-movement egress doors."
+    }
+  },
+  {
+    "sku": "TRAP-NC-003",
+    "name": "EconoRest Fixed-Frame LTC Bed (Legacy Rails)",
+    "category": "resident_bed",
+    "subcategory": "Long-Term Care Bed",
+    "vendor": "BudgetMed",
+    "unit": "each",
+    "list_price": 1290.0,
+    "applicable_rooms": [
+      "resident_room"
+    ],
+    "attributes": {
+      "entrapment_compliant": false,
+      "astm_f1858": false,
+      "adjustable_height": true,
+      "cleanable_surface": true
+    },
+    "compliant": false,
+    "known_violation": {
+      "rule_id": "bed_entrapment",
+      "citation": "FDA Hospital Bed Entrapment Guidance (2006) / ASTM F1858",
+      "reason": "Legacy rail geometry does not document entrapment-zone conformance."
+    }
+  },
+  {
+    "sku": "TRAP-NC-004",
+    "name": "GlossFinish Porous Lounge Seating",
+    "category": "common_area",
+    "subcategory": "Lounge Seating",
+    "vendor": "ComfortLine",
+    "unit": "each",
+    "list_price": 510.0,
+    "applicable_rooms": [
+      "common_area"
+    ],
+    "attributes": {
+      "cleanable_surface": false,
+      "non_porous": false,
+      "wheelchair_accessible": true
+    },
+    "compliant": false,
+    "known_violation": {
+      "rule_id": "cleanable_surfaces",
+      "citation": "42 CFR \u00a7483.80 / F880",
+      "reason": "Porous, non-cleanable upholstery is unsuitable for infection control in resident areas."
+    }
+  },
+  {
+    "sku": "TRAP-NC-005",
+    "name": "SlickShine Resident Room Vinyl (Non-Slip-Rated)",
+    "category": "flooring",
+    "subcategory": "Resilient Sheet Vinyl",
+    "vendor": "FloorSafe",
+    "unit": "sq_ft",
+    "list_price": 4.0,
+    "applicable_rooms": [
+      "resident_room",
+      "corridor",
+      "bathroom",
+      "common_area"
+    ],
+    "attributes": {
+      "slip_resistant": false,
+      "cleanable_surface": true,
+      "non_porous": true
+    },
+    "compliant": false,
+    "known_violation": {
+      "rule_id": "slip_resistant_flooring",
+      "citation": "42 CFR \u00a7483.25(d) / F689",
+      "reason": "Flooring is not slip-resistant, increasing avoidable fall risk."
+    }
+  }
+]

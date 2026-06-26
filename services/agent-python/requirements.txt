@@ -1,0 +1,24 @@
+# --- web / api ---
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+httpx==0.28.1
+pydantic==2.10.4
+pydantic-settings==2.7.1
+python-dotenv==1.0.1
+websockets==14.1
+
+# --- agent graph ---
+langgraph==0.2.60
+langchain-core==0.3.28
+
+# --- frontier models (optional at runtime; graph falls back to heuristic provider) ---
+anthropic==0.42.0
+openai==1.59.5
+
+# --- data / rag / db ---
+numpy==2.2.1
+psycopg[binary]==3.2.3
+pgvector==0.3.6
+
+# --- observability (optional) ---
+langfuse==2.57.0

@@ -1,0 +1,101 @@
+name: sentinel-ci
+
+# Build the polyglot stack, run the tool tests, and gate on the eval harness:
+# a regression in compliance recall / grounding rate / false-violation rate
+# blocks the deploy. This is the "operate AI in production" story in CI form.
+
+on:
+  push: { branches: [main] }
+  pull_request: { branches: [main] }
+
+jobs:
+  catalog-csharp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with: { dotnet-version: "9.0.x" }
+      - working-directory: services/catalog-csharp
+        run: dotnet build -c Release
+
+  mcp-tools-ts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - working-directory: services/mcp-tools-ts
+        run: |
+          npm install --no-audit --no-fund
+          npm run build
+          npm test
+
+  console-ts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - working-directory: web/console-ts
+        run: |
+          npm install --no-audit --no-fund
+          npm run build
+
+  eval-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.13" }
+      - name: Install agent deps
+        run: pip install -r services/agent-python/requirements.txt
+      - name: Regenerate catalog seed
+        run: python data/scripts/generate_catalog.py
+      - name: Run eval harness (gate)
+        # PROVIDER_MODE=dev keeps CI on the free/heuristic path (no credits spent);
+        # the gate still enforces compliance recall, grounding, and zero false-violations.
+        env:
+          PROVIDER_MODE: dev
+        run: python eval/harness.py
+      - name: Upload eval report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eval-report
+          path: eval/reports/
+
+  terraform-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+      - working-directory: infra
+        run: |
+          terraform init -backend=false
+          terraform validate
+
+  # ---- deploy gate: only runs on main, only if eval + builds pass ----
+  build-and-push:
+    needs: [catalog-csharp, mcp-tools-ts, console-ts, eval-gate, terraform-validate]
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions: { contents: read, packages: write }
+    strategy:
+      matrix:
+        service:
+          - { name: catalog, ctx: services/catalog-csharp }
+          - { name: mcp, ctx: services/mcp-tools-ts }
+          - { name: agent, ctx: services/agent-python }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build & push ${{ matrix.service.name }}
+        uses: docker/build-push-action@v6
+        with:
+          context: ${{ matrix.service.ctx }}
+          push: true
+          tags: ghcr.io/${{ github.repository }}/${{ matrix.service.name }}:latest

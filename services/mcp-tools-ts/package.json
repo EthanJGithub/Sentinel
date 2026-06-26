@@ -1,0 +1,27 @@
+{
+  "name": "sentinel-mcp-tools",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Sentinel MCP tool server — agent-legible compliance/cost tools (reg_search, validate_item, validate_layout, cost_calc) with Zod-typed schemas.",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "mcp": "tsx src/mcpServer.ts",
+    "http": "tsx src/httpServer.ts",
+    "start": "node dist/httpServer.js",
+    "test": "tsx src/selftest.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.17.10",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

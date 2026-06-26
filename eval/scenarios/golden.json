@@ -1,0 +1,86 @@
+[
+  {
+    "id": "clean-30-memory-care",
+    "name": "30-bed memory-care wing, ample budget (clean baseline)",
+    "request": "Opening a 30-bed memory-care wing in 60 days. Equip resident rooms, nursing station, and common areas, compliant with CMS Life-Safety + NC rules, using GPO contract pricing.",
+    "budget_usd": 480000, "contract_id": "DSSI-DIRECT", "plant_violation_sku": null,
+    "expected": { "expected_violation_skus": [], "budget_feasible": true }
+  },
+  {
+    "id": "plant-call-coverage",
+    "name": "Planted: bedside-only call station (no toilet/bath coverage)",
+    "request": "Equip a 30-bed memory-care wing within budget and compliant.",
+    "budget_usd": 480000, "contract_id": "DSSI-DIRECT", "plant_violation_sku": "TRAP-NC-001",
+    "expected": { "expected_violation_skus": ["TRAP-NC-001"], "citation_contains": "483.90(g)", "budget_feasible": true }
+  },
+  {
+    "id": "plant-door-width",
+    "name": "Planted: 36in resident room door (egress width)",
+    "request": "Equip a 30-bed skilled-nursing wing, compliant with Life Safety Code.",
+    "budget_usd": 480000, "contract_id": "GPO-PREMIER", "plant_violation_sku": "TRAP-NC-002",
+    "expected": { "expected_violation_skus": ["TRAP-NC-002"], "citation_contains": "18.2.3.6", "budget_feasible": true }
+  },
+  {
+    "id": "plant-bed-entrapment",
+    "name": "Planted: legacy-rail bed (entrapment risk)",
+    "request": "Equip a 24-bed long-term care wing within budget.",
+    "budget_usd": 400000, "contract_id": "DSSI-DIRECT", "plant_violation_sku": "TRAP-NC-003",
+    "expected": { "expected_violation_skus": ["TRAP-NC-003"], "citation_contains": "Entrapment", "budget_feasible": true }
+  },
+  {
+    "id": "plant-porous-surface",
+    "name": "Planted: porous, non-cleanable lounge seating (infection control)",
+    "request": "Equip common areas and a 20-bed assisted-living wing, compliant.",
+    "budget_usd": 350000, "contract_id": "GPO-VIZIENT", "plant_violation_sku": "TRAP-NC-004",
+    "expected": { "expected_violation_skus": ["TRAP-NC-004"], "citation_contains": "F880", "budget_feasible": true }
+  },
+  {
+    "id": "plant-slippery-floor",
+    "name": "Planted: non-slip-rated resident room vinyl (fall risk)",
+    "request": "Equip a 30-bed memory-care wing with attention to fall prevention.",
+    "budget_usd": 460000, "contract_id": "DSSI-DIRECT", "plant_violation_sku": "TRAP-NC-005",
+    "expected": { "expected_violation_skus": ["TRAP-NC-005"], "citation_contains": "F689", "budget_feasible": true }
+  },
+  {
+    "id": "tight-budget-100k",
+    "name": "Infeasible budget — minimum compliant config exceeds budget",
+    "request": "Equip a 30-bed memory-care wing for under $100k.",
+    "budget_usd": 100000, "contract_id": "DSSI-DIRECT", "plant_violation_sku": null,
+    "expected": { "expected_violation_skus": [], "budget_feasible": false }
+  },
+  {
+    "id": "budget-optimize-250k",
+    "name": "Budget optimization — swaps bring cart under budget",
+    "request": "Equip a 30-bed memory-care wing for $250k using contract pricing.",
+    "budget_usd": 250000, "contract_id": "DSSI-DIRECT", "plant_violation_sku": null,
+    "expected": { "expected_violation_skus": [], "budget_feasible": true }
+  },
+  {
+    "id": "small-12-bed",
+    "name": "Small 12-bed wing",
+    "request": "Equip a 12-bed memory-care wing, compliant.",
+    "budget_usd": 200000, "contract_id": "GPO-PREMIER", "plant_violation_sku": null,
+    "expected": { "expected_violation_skus": [], "budget_feasible": true }
+  },
+  {
+    "id": "large-48-bed",
+    "name": "Large 48-bed wing",
+    "request": "Equip a 48-bed skilled-nursing wing within budget, compliant with CMS and NFPA 101.",
+    "budget_usd": 900000, "contract_id": "DSSI-DIRECT", "plant_violation_sku": null,
+    "expected": { "expected_violation_skus": [], "budget_feasible": true }
+  },
+  {
+    "id": "plant-call-tight-budget",
+    "name": "Planted violation AND tight budget (two pressures at once)",
+    "request": "Equip a 30-bed memory-care wing for $260k, compliant.",
+    "budget_usd": 260000, "contract_id": "DSSI-DIRECT", "plant_violation_sku": "TRAP-NC-001",
+    "expected": { "expected_violation_skus": ["TRAP-NC-001"], "citation_contains": "483.90(g)", "budget_feasible": true }
+  },
+  {
+    "id": "assisted-living-vizient",
+    "name": "Assisted living on Vizient contract",
+    "request": "Equip a 20-bed assisted-living wing, compliant, Vizient pricing.",
+    "budget_usd": 300000, "contract_id": "GPO-VIZIENT", "plant_violation_sku": null,
+    "expected": { "expected_violation_skus": [], "budget_feasible": true }
+  }
+]

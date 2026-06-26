@@ -1,0 +1,57 @@
+# ---- Secrets / env ----
+.env
+.env.*
+!.env.example
+*.local
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# ---- Node / TS ----
+node_modules/
+dist/
+build/
+.vite/
+*.tsbuildinfo
+npm-debug.log*
+
+# ---- .NET ----
+bin/
+obj/
+*.user
+
+# ---- Docs assets (keep committed screenshots) ----
+!docs/img/*.png
+
+# ---- Data caches (large; live on D:) ----
+data/cache/
+*.pdf
+*.zip
+# keep curated, committed corpus:
+!data/regulations/*.jsonl
+!data/regulations/*.md
+!data/catalog/*.json
+!data/catalog/*.csv
+
+# ---- Terraform ----
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!example.tfvars
+
+# ---- Eval run artifacts (keep the latest committed report) ----
+eval/reports/run-*.json
+
+# ---- OS / IDE ----
+.DS_Store
+Thumbs.db
+.idea/
+.vs/

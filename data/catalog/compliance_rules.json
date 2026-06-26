@@ -1,0 +1,72 @@
+[
+  {
+    "rule_id": "call_system_coverage",
+    "category": "nurse_call",
+    "predicate": {
+      "covers_bedside": true,
+      "covers_toilet_bath": true
+    },
+    "citation": "42 CFR \u00a7483.90(g)",
+    "reg_id": "cfr-483.90-g",
+    "message": "Resident call system must reach both bedside and toilet/bathing facilities."
+  },
+  {
+    "rule_id": "egress_door_clear_width",
+    "category": "casework_door",
+    "predicate": {
+      "clear_width_in_min": 41.5
+    },
+    "applies_when": {
+      "subcategory": "Resident Room Door (Bed-Movement)"
+    },
+    "citation": "NFPA 101 (2012) \u00a718.2.3.6",
+    "reg_id": "nfpa101-2012-18.2.3.6-door",
+    "message": "Bed-movement egress doors require >= 41.5 in clear width."
+  },
+  {
+    "rule_id": "bed_entrapment",
+    "category": "resident_bed",
+    "predicate": {
+      "entrapment_compliant": true
+    },
+    "citation": "FDA Hospital Bed Entrapment Guidance (2006) / ASTM F1858",
+    "reg_id": "fda-bed-entrapment-2006",
+    "message": "Beds/rails must document entrapment-zone conformance (FDA 2006 / ASTM F1858)."
+  },
+  {
+    "rule_id": "cleanable_surfaces",
+    "category": "*",
+    "predicate": {
+      "cleanable_surface": true
+    },
+    "citation": "42 CFR \u00a7483.80 / F880",
+    "reg_id": "cms-infection-surfaces-f880",
+    "message": "Resident-area surfaces must be cleanable/non-porous for infection control."
+  },
+  {
+    "rule_id": "slip_resistant_flooring",
+    "category": "flooring",
+    "predicate": {
+      "slip_resistant": true
+    },
+    "citation": "42 CFR \u00a7483.25(d) / F689",
+    "reg_id": "som-app-pp-f689-accidents",
+    "message": "Resident-area flooring must be slip-resistant to mitigate fall risk."
+  },
+  {
+    "rule_id": "grab_bar_height",
+    "category": "bathroom_safety",
+    "predicate": {
+      "grab_bar_height_in_range": [
+        33,
+        36
+      ]
+    },
+    "applies_when": {
+      "subcategory": "ADA Grab Bar Set"
+    },
+    "citation": "2010 ADA Standards \u00a7609",
+    "reg_id": "ada-2010-604-grab-bars",
+    "message": "Grab bars at water closets must be mounted 33-36 in above the floor."
+  }
+]
