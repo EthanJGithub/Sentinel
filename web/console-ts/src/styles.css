@@ -19,10 +19,15 @@
   --primary-050: #e4f0f4;
   --accent: #11808a;
 
-  /* ink */
-  --ink: #15242c;
-  --ink-2: #46606e;
-  --ink-3: #7892a0;
+  /* ink — all three clear WCAG 2.1 AA (>=4.5:1) on white/surface for normal text */
+  --ink: #15242c;   /* ~14:1 */
+  --ink-2: #46606e; /* ~6.3:1 */
+  --ink-3: #566b76; /* ~4.8:1  (was #7892a0 @ 3.27:1 — failed AA) */
+
+  /* rail (on the #0b5570 teal) — secondary text tuned to clear AA on that ground */
+  --rail-ink: #eaf4f8;   /* primary text */
+  --rail-ink-2: #c5dce6; /* secondary ~4.9:1 on #0b5570 */
+  --rail-ink-3: #b3d0db; /* tertiary  ~4.6:1 on #0b5570 */
 
   /* status — each paired with a tint; UI also shows an icon + word */
   --ok: #157f4c; --ok-bg: #e4f4ea; --ok-bd: #b6e0c6;
@@ -49,12 +54,18 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-size: 14px;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 /* ---------- app shell: three-column clinical layout ---------- */
-.app { display: grid; grid-template-columns: 268px 1fr 360px; grid-template-rows: 56px 1fr;
-       grid-template-areas: "rail topbar topbar" "rail main aside"; height: 100vh; }
+.app { display: grid; grid-template-columns: 268px minmax(0, 1fr) 360px; grid-template-rows: 56px 1fr;
+       grid-template-areas: "rail topbar topbar" "rail main aside"; height: 100vh;
+       /* cap on ultrawide so content stays dense + line-length readable (enterprise pattern) */
+       max-width: 1760px; margin-inline: auto; box-shadow: 0 0 0 1px var(--border); }
+/* keep the canvas calm outside the capped app on very wide monitors */
+body { background: var(--bg); }
 .rail   { grid-area: rail;   background: var(--primary-700); color: #dceaf0; display: flex; flex-direction: column; }
 .topbar { grid-area: topbar; background: var(--surface); border-bottom: 1px solid var(--border);
           display: flex; align-items: center; gap: 18px; padding: 0 22px; }
@@ -68,12 +79,12 @@ body {
                display: grid; place-items: center; box-shadow: inset 0 0 0 1px rgba(255,255,255,.25); }
 .brand .logo svg { width: 18px; height: 18px; }
 .brand h1 { font-size: 15px; margin: 0; color: #fff; letter-spacing: .2px; }
-.brand .sub { font-size: 11px; color: #9fc4d2; }
+.brand .sub { font-size: 11px; color: var(--rail-ink-2); }
 
 .rail-section { padding: 14px 18px; }
-.rail-section h3 { font-size: 11px; text-transform: uppercase; letter-spacing: .8px; color: #8fb6c5; margin: 0 0 10px; }
+.rail-section h3 { font-size: 11px; text-transform: uppercase; letter-spacing: .8px; color: var(--rail-ink-3); margin: 0 0 10px; }
 .rail-field { margin-bottom: 12px; }
-.rail-field label { display: block; font-size: 11px; color: #9fc4d2; margin-bottom: 5px; }
+.rail-field label { display: block; font-size: 11px; color: var(--rail-ink-2); margin-bottom: 5px; }
 .rail-field .val { font-size: 13px; color: #eaf4f8; font-weight: 500; }
 .preset { width: 100%; text-align: left; background: rgba(255,255,255,.06); color: #dceaf0; border: 1px solid rgba(255,255,255,.10);
           border-radius: 8px; padding: 9px 11px; margin-bottom: 7px; cursor: pointer; font-size: 12.5px; transition: .12s; }
@@ -81,7 +92,7 @@ body {
 .preset.danger { border-color: rgba(241,194,189,.4); }
 .preset .tag { font-size: 10px; color: #ffd9d3; }
 .rail-spacer { flex: 1; }
-.rail-foot { padding: 14px 18px; font-size: 11px; color: #7ea7b7; border-top: 1px solid rgba(255,255,255,.12); }
+.rail-foot { padding: 14px 18px; font-size: 11.5px; line-height: 1.5; color: var(--rail-ink-3); border-top: 1px solid rgba(255,255,255,.12); }
 
 /* ---------- topbar ---------- */
 .topbar .facility { font-weight: 600; font-size: 15px; }
@@ -95,7 +106,7 @@ body {
         box-shadow: var(--shadow); margin-bottom: 18px; }
 .card > header { display: flex; align-items: center; gap: 10px; padding: 13px 16px; border-bottom: 1px solid var(--border); }
 .card > header h2 { font-size: 13.5px; margin: 0; font-weight: 600; letter-spacing: .2px; }
-.card > header .hint { font-size: 11.5px; color: var(--ink-3); }
+.card > header .hint { font-size: 12px; color: var(--ink-3); }
 .card > header .spacer { flex: 1; }
 .card .body { padding: 16px; }
 .card .body.tight { padding: 8px 16px; }
@@ -150,13 +161,13 @@ body {
 .node-row.active .node-dot { border-color: var(--primary); color: var(--primary); box-shadow: 0 0 0 4px var(--primary-050); animation: pulse 1s infinite; }
 .node-row.done .node-dot { border-color: var(--ok); background: var(--ok); color: #fff; }
 .node-name { font-weight: 600; font-size: 13px; }
-.node-detail { font-size: 11.5px; color: var(--ink-3); }
+.node-detail { font-size: 12px; color: var(--ink-3); }
 .node-row .spacer { flex: 1; }
 .node-meta { font-family: var(--mono); font-size: 11px; color: var(--ink-3); }
 @keyframes pulse { 0%,100% { box-shadow: 0 0 0 4px var(--primary-050); } 50% { box-shadow: 0 0 0 7px rgba(15,110,140,.10); } }
 
 .tracelog { margin-top: 10px; max-height: 168px; overflow-y: auto; border-top: 1px dashed var(--border);
-            padding-top: 8px; font-family: var(--mono); font-size: 11px; color: var(--ink-2); }
+            padding-top: 8px; font-family: var(--mono); font-size: 11.5px; line-height: 1.55; color: var(--ink-2); }
 .tracelog .ln { padding: 1px 0; }
 .tracelog .ln.gate { color: var(--crit); }
 .tracelog .ln.model { color: var(--primary); }
@@ -179,12 +190,12 @@ table.grid td.num { text-align: right; font-variant-numeric: tabular-nums; }
 .finding.v-ABSTAIN   { border-left-color: var(--warn); background: linear-gradient(0deg, var(--warn-bg), #fff 70%); }
 .finding .f-head { display: flex; align-items: center; gap: 10px; }
 .finding .f-name { font-weight: 600; font-size: 13px; }
-.finding .f-room { font-size: 11px; color: var(--ink-3); }
+.finding .f-room { font-size: 11.5px; color: var(--ink-3); }
 .finding .f-rationale { font-size: 12.5px; color: var(--ink-2); margin: 8px 0 0; line-height: 1.45; }
 .citation { margin-top: 9px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px; padding: 9px 11px; }
 .citation .c-cite { font-weight: 600; font-size: 11.5px; color: var(--primary-700); display: flex; align-items: center; gap: 6px; }
 .citation .c-quote { font-size: 11.5px; color: var(--ink-2); margin-top: 4px; line-height: 1.4; font-style: italic; }
-.citation .c-src { font-size: 10.5px; color: var(--ink-3); margin-top: 5px; font-family: var(--mono); }
+.citation .c-src { font-size: 11px; color: var(--ink-3); margin-top: 5px; font-family: var(--mono); }
 .fix { margin-top: 8px; font-size: 11.5px; color: var(--ok); display: flex; align-items: center; gap: 6px; }
 
 /* ---------- aside: monitoring + audit ---------- */
