@@ -39,6 +39,15 @@
     "predicate": {
       "cleanable_surface": true
     },
+    "applies_when": {
+      "category_in": [
+        "furniture",
+        "flooring",
+        "mattress",
+        "common_area",
+        "fall_prevention"
+      ]
+    },
     "citation": "42 CFR \u00a7483.80 / F880",
     "reg_id": "cms-infection-surfaces-f880",
     "message": "Resident-area surfaces must be cleanable/non-porous for infection control."

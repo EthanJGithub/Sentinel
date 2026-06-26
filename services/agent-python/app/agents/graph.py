@@ -204,19 +204,38 @@ def _validate_one(ctx: AgentContext, reg_index: dict, item: dict, room_type: str
                                  citations=[citation] if citation else [], grounded=bool(citation))
 
     # ---- no explicit rule -> RAG + citation-or-abstain + hallucination gate ----
+    # prefer the TS MCP server's reg_search when wired (MCP_URL); else in-process retriever
     query = f"{item['name']} {item['category']} {room_type}"
-    hits = ctx.retriever.search(query, categories=[item["category"], room_type], k=3)
-    ctx.meter.tool("Compliance", "reg_search", bool(hits),
-                   f"{item['category']}: top={hits[0].score if hits else 0}")
-    if not hits or hits[0].score < ABSTAIN_THRESHOLD:
+    top_id = top_source = top_cite = top_quote = ""
+    top_score = 0.0
+    if ctx.mcp.enabled:
+        try:
+            results = ctx.mcp.reg_search(query, [item["category"], room_type], k=3)
+            ctx.meter.tool("Compliance", "reg_search[MCP]", bool(results),
+                           f"{item['category']}: top={results[0]['score'] if results else 0}")
+            if results:
+                r0 = results[0]
+                top_id, top_source, top_cite = r0["reg_id"], r0["source"], r0["citation"]
+                top_quote, top_score = r0["quote"], float(r0["score"])
+        except Exception as e:  # noqa: BLE001 - fall back to local retriever
+            ctx.meter.tool("Compliance", "reg_search[MCP]", False, f"MCP error: {e}; local fallback")
+    if not top_id:
+        hits = ctx.retriever.search(query, categories=[item["category"], room_type], k=3)
+        ctx.meter.tool("Compliance", "reg_search", bool(hits),
+                       f"{item['category']}: top={hits[0].score if hits else 0}")
+        if hits:
+            c0 = hits[0]
+            top_id, top_source, top_cite = c0.chunk.id, c0.chunk.source, c0.chunk.citation
+            top_quote, top_score = c0.chunk.content, c0.score
+
+    if not top_id or top_score < ABSTAIN_THRESHOLD:
         return ComplianceFinding(sku=item["sku"], name=item["name"], room_type=room_type,
                                  verdict="ABSTAIN",
                                  rationale="No sufficiently relevant regulation retrieved; abstaining "
                                  "and flagging for human review (citation-or-abstain).",
                                  citations=[], grounded=False)
-    top = hits[0]
-    citation = Citation(reg_id=top.chunk.id, source=top.chunk.source, citation=top.chunk.citation,
-                        quote=top.chunk.content, score=top.score)
+    citation = Citation(reg_id=top_id, source=top_source, citation=top_cite,
+                        quote=top_quote, score=top_score)
     rationale, model, ti, to = ctx.router.compliance_rationale(item, "PASS", citation.quote,
                                                                "Reviewed against retrieved regulation.")
     ctx.meter.model_call("Compliance", model, ti, to, f"reason: {item['sku']} -> PASS")

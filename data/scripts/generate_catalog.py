@@ -257,6 +257,7 @@ def gen_rules():
          "message": "Beds/rails must document entrapment-zone conformance (FDA 2006 / ASTM F1858)."},
         {"rule_id": "cleanable_surfaces", "category": "*",
          "predicate": {"cleanable_surface": True},
+         "applies_when": {"category_in": ["furniture", "flooring", "mattress", "common_area", "fall_prevention"]},
          "citation": "42 CFR §483.80 / F880", "reg_id": "cms-infection-surfaces-f880",
          "message": "Resident-area surfaces must be cleanable/non-porous for infection control."},
         {"rule_id": "slip_resistant_flooring", "category": "flooring",

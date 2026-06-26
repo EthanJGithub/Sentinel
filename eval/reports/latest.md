@@ -1,5 +1,5 @@
 # Sentinel — Eval Report
-_Generated 2026-06-26T14:37:44.948736+00:00_  ·  12 golden scenarios
+_Generated 2026-06-26T14:42:15.164971+00:00_  ·  12 golden scenarios
 
 **Gate: PASSED ✅**
 
@@ -12,7 +12,7 @@ _Generated 2026-06-26T14:37:44.948736+00:00_  ·  12 golden scenarios
 | False-violation rate (clean carts) | 0.00 | 0.00 | ✅ |
 | Plan completeness | 100.0% | 95% | ✅ |
 | Avg cost / run | $0.00000 | — | — |
-| Avg latency / run | 1 ms | — | — |
+| Avg latency / run | 2 ms | — | — |
 
 ## Per-scenario
 | Scenario | Caught | Expected | Catch | Budget | Subtotal/Budget |

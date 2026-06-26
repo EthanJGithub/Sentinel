@@ -34,6 +34,7 @@ export class ComplianceTools {
     if (rule.category !== "*" && rule.category !== item.category) return false;
     const aw = rule.applies_when ?? {};
     if (aw.subcategory && aw.subcategory !== item.subcategory) return false;
+    if (aw.category_in && !aw.category_in.includes(item.category)) return false;
     if (aw.applicable_rooms_includes && item.room_type !== aw.applicable_rooms_includes) return false;
     return true;
   }

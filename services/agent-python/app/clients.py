@@ -127,6 +127,28 @@ class _LocalCatalog:
                 "lineCount": len(lines), "note": "local-fallback (C# service not connected)"}
 
 
-@lru_cache
-def get_catalog_client_cached(_key: str) -> CatalogClient:  # pragma: no cover
-    raise NotImplementedError
+# ---------------------------------------------------------------------------
+# MCP tool client (TS MCP server over HTTP). When MCP_URL is set, the agent
+# genuinely calls the TypeScript MCP server for reg_search; otherwise it falls
+# back to the in-process retriever (same corpus + logic), so offline runs work.
+# ---------------------------------------------------------------------------
+class MCPClient:
+    def __init__(self, settings: Settings):
+        self.base = settings.mcp_url.rstrip("/") if settings.mcp_url else ""
+
+    @property
+    def enabled(self) -> bool:
+        return bool(self.base)
+
+    def reg_search(self, query: str, categories: list[str], k: int = 4) -> list[dict]:
+        with httpx.Client(timeout=15) as c:
+            r = c.post(f"{self.base}/tools/reg_search",
+                       json={"query": query, "categories": categories, "k": k})
+            r.raise_for_status()
+            return r.json().get("results", [])
+
+    def validate_item(self, item: dict) -> dict:
+        with httpx.Client(timeout=15) as c:
+            r = c.post(f"{self.base}/tools/validate_item", json=item)
+            r.raise_for_status()
+            return r.json()

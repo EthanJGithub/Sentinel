@@ -36,6 +36,8 @@ def _applies(rule: Rule, item: dict) -> bool:
     aw = rule.applies_when
     if "subcategory" in aw and aw["subcategory"] != item.get("subcategory"):
         return False
+    if "category_in" in aw and item.get("category") not in aw["category_in"]:
+        return False
     if "applicable_rooms_includes" in aw:
         rooms = item.get("applicable_rooms") or item.get("applicableRooms") or []
         if aw["applicable_rooms_includes"] not in rooms:
