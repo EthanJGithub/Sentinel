@@ -14,11 +14,11 @@ services:
     dockerContext: .
     plan: free
     healthCheckPath: /health
+    envVarGroups:
+      - sentinel-secrets
     envVars:
       - key: CATALOG_DB          # Neon connection string, Npgsql format — paste at setup
         sync: false
-      - key: JWT_SECRET
-        fromGroup: sentinel-secrets
       - key: ASPNETCORE_URLS
         value: http://+:8080
 
@@ -37,11 +37,11 @@ services:
     dockerContext: .
     plan: free
     healthCheckPath: /health
+    envVarGroups:
+      - sentinel-secrets
     envVars:
       - key: DATABASE_URL         # Neon connection string, postgres:// format — paste at setup
         sync: false
-      - key: JWT_SECRET
-        fromGroup: sentinel-secrets
       - key: CATALOG_URL
         value: https://sentinel-catalog.onrender.com
       - key: MCP_URL
