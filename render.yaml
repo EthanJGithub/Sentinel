@@ -1,0 +1,62 @@
+# Render Blueprint — one-click deploy of the 3 backend services.
+# https://render.com/docs/blueprint-spec
+#
+# Usage: click "Deploy to Render" (see README/DEPLOY.md), connect GitHub, and
+# paste in the two `sync: false` secrets below (your Neon connection strings)
+# when prompted. Everything else (Dockerfile paths, ports, health checks,
+# service-to-service URLs, and a shared JWT secret) is pre-wired.
+
+services:
+  - type: web
+    name: sentinel-catalog
+    runtime: docker
+    dockerfilePath: ./services/catalog-csharp/Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: CATALOG_DB          # Neon connection string, Npgsql format — paste at setup
+        sync: false
+      - key: JWT_SECRET
+        fromGroup: sentinel-secrets
+      - key: ASPNETCORE_URLS
+        value: http://+:8080
+
+  - type: web
+    name: sentinel-mcp
+    runtime: docker
+    dockerfilePath: ./services/mcp-tools-ts/Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
+
+  - type: web
+    name: sentinel-agent
+    runtime: docker
+    dockerfilePath: ./services/agent-python/Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL         # Neon connection string, postgres:// format — paste at setup
+        sync: false
+      - key: JWT_SECRET
+        fromGroup: sentinel-secrets
+      - key: CATALOG_URL
+        value: https://sentinel-catalog.onrender.com
+      - key: MCP_URL
+        value: https://sentinel-mcp.onrender.com
+      - key: CORS_ORIGINS
+        value: https://sentinel-console-gamma.vercel.app
+      - key: REQUIRE_STRONG_SECRETS
+        value: "true"
+      - key: PROVIDER_MODE
+        value: auto
+      - key: GROQ_API_KEY         # optional — real $0 LLM reasoning; leave blank for heuristic
+        sync: false
+
+envVarGroups:
+  - name: sentinel-secrets
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true      # one shared secret, auto-generated, used by both services

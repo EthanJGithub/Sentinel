@@ -20,8 +20,27 @@ with an empty catalog.
 3. You'll use this connection string twice: `DATABASE_URL` (agent, must include
    `?sslmode=require`) and `CATALOG_DB` in Npgsql format (catalog service).
 
-## 2. Backend services — Render (or Fly.io)
-Three services, each built from the **repo root** with an explicit Dockerfile path.
+## 2. Backend services — Render (Blueprint, one click) or Fly.io
+
+**Fastest path — Render Blueprint:** this repo ships a `render.yaml` that
+pre-configures all 3 services (Dockerfile paths, ports, health checks,
+service-to-service URLs, a shared auto-generated `JWT_SECRET`). Click:
+
+**[Deploy to Render](https://render.com/deploy?repo=https://github.com/EthanJGithub/sentinel-direct-supply)**
+
+Connect your GitHub account, and when prompted paste in the two secrets:
+- `CATALOG_DB` — your Neon connection string in **Npgsql format**:
+  `Host=...;Port=5432;Database=...;Username=...;Password=...;SslMode=Require`
+- `DATABASE_URL` — your Neon connection string in **postgres:// format**
+  (same database, both services need it in their respective formats)
+- `GROQ_API_KEY` (optional) — for real, $0 LLM reasoning instead of the heuristic
+
+Everything else — ports, health checks, `CATALOG_URL`/`MCP_URL` wiring between
+services, `CORS_ORIGINS` pointed at the deployed console, and a shared
+`JWT_SECRET` (auto-generated once, used by both services) — is already set.
+
+Three services, each built from the **repo root** with an explicit Dockerfile path
+(manual setup, if not using the Blueprint):
 
 | Service | Dockerfile | Port | Health check |
 |---|---|---|---|

@@ -14,6 +14,11 @@ It fuses their three product lines — **DSSI** (sourcing/contracts), **TELS** (
 
 ![Sentinel console](docs/img/console.png)
 
+**Live:** console → https://sentinel-console-gamma.vercel.app (Neon Postgres provisioned;
+backend deploys via the one-click Render Blueprint below — the console degrades
+gracefully to an embedded sample if the backend isn't up yet).
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/EthanJGithub/sentinel-direct-supply)
+
 ## Why it maps to the role
 | JD asks for | Sentinel answer |
 |---|---|
