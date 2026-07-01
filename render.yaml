@@ -43,7 +43,11 @@ services:
       - key: CATALOG_URL
         value: https://sentinel-catalog.onrender.com
       - key: MCP_URL
-        value: https://sentinel-mcp.onrender.com
+        # NOTE: "sentinel-mcp.onrender.com" was already claimed by an unrelated
+        # Render user - names are globally unique, so Render auto-suffixed ours.
+        # Update this to your actual assigned URL (Render dashboard -> sentinel-mcp
+        # service -> the URL shown under the service name).
+        value: https://sentinel-mcp-yf8u.onrender.com
       - key: CORS_ORIGINS
         value: https://sentinel-console-gamma.vercel.app
       - key: REQUIRE_STRONG_SECRETS
