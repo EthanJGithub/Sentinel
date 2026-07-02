@@ -81,7 +81,17 @@ export async function approve(planId: string): Promise<any> {
 }
 
 /** Stream the live agent trace over WebSocket (token via query); resolves with the
- *  final PlanResult. Falls back to REST, then to the embedded sample. */
+ *  final PlanResult. Falls back to REST, then to the embedded sample.
+ *
+ *  Timeouts are generous on purpose: free-tier Render instances cold-start in
+ *  up to ~50s, and a real Groq-backed compliance run (esp. one that hits the
+ *  budget re-source loop) can legitimately take 10-90s. A too-aggressive
+ *  timeout here silently swaps in the static offline sample instead of the
+ *  real result — which looks like "every demo mode returns the same answer"
+ *  even though the backend is working fine, just slow to wake up. */
+const WS_CONNECT_TIMEOUT_MS = 45_000;   // time to allow for cold-start + handshake
+const REST_FALLBACK_TIMEOUT_MS = 120_000; // time to allow for a full slow run
+
 export function runPlanStreaming(
   req: PlanRequest,
   onTrace: (ev: TraceEvent) => void,
@@ -96,9 +106,11 @@ export function runPlanStreaming(
     } catch {
       return restFallback(req).then(resolve, reject);
     }
+    // only bounds the initial connect/handshake — once opened, there is no
+    // timeout on waiting for the result (a slow real run must not be cut off)
     const failTimer = setTimeout(() => {
       if (!settled) { try { ws.close(); } catch {} restFallback(req).then(resolve, reject); settled = true; }
-    }, 4000);
+    }, WS_CONNECT_TIMEOUT_MS);
 
     ws.onopen = () => { clearTimeout(failTimer); ws.send(JSON.stringify(req)); };
     ws.onmessage = (e) => {
@@ -118,11 +130,17 @@ export function runPlanStreaming(
 }
 
 async function restFallback(req: PlanRequest): Promise<PlanResult> {
-  const r = await fetch(`${AGENT_URL}/plan`, {
-    method: "POST", headers: { "Content-Type": "application/json", ...authHeaders() },
-    body: JSON.stringify(req),
-  });
-  if (handle401(r.status)) throw new Error("session expired");
-  if (!r.ok) throw new Error(`agent error ${r.status}`);
-  return r.json();
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), REST_FALLBACK_TIMEOUT_MS);
+  try {
+    const r = await fetch(`${AGENT_URL}/plan`, {
+      method: "POST", headers: { "Content-Type": "application/json", ...authHeaders() },
+      body: JSON.stringify(req), signal: controller.signal,
+    });
+    if (handle401(r.status)) throw new Error("session expired");
+    if (!r.ok) throw new Error(`agent error ${r.status}`);
+    return await r.json();
+  } finally {
+    clearTimeout(timer);
+  }
 }

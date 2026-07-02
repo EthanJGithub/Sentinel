@@ -232,6 +232,13 @@ function Composer({ req, setReq, run, running }: any) {
             <button className="btn btn-primary" onClick={run} disabled={running}>
               {running ? <><span className="spinner" />Running agents…</> : "Generate compliant plan"}</button></div>
         </div>
+        {running && (
+          <div className="banner-note" style={{ marginTop: 12 }}>
+            First request after idle time can take up to ~60s — the backend runs on a
+            free tier that sleeps when unused, and real compliance checks call a live
+            LLM. Later requests are much faster.
+          </div>
+        )}
       </div>
     </div>
   );
