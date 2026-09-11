@@ -155,20 +155,20 @@ function Rail({ env, onPreset, view, setView, pending }:
           {pending > 0 && <span className="nav-badge">{pending}</span>}
         </button>
       </div>
-      <div className="rail-section">
-        <h3>Facility</h3>
+      <details className="rail-section rail-details" open={window.innerWidth > 800}>
+        <summary>Facility</summary>
         <div className="rail-field"><label>Provider</label><div className="val">Cedarwood Senior Living</div></div>
         <div className="rail-field"><label>State · Care type</label><div className="val">NC · Memory care</div></div>
         <div className="rail-field"><label>GPO contract</label><div className="val">Direct Supply DSSI</div></div>
-      </div>
-      <div className="rail-section">
-        <h3>Scenarios</h3>
+      </details>
+      <details className="rail-section rail-details" open={window.innerWidth > 800}>
+        <summary>Scenarios</summary>
         {PRESETS.map((p) => (
           <button key={p.label} className={`preset${p.danger ? " danger" : ""}`} onClick={() => onPreset(p)}>
             {p.label}{p.tag && <><br /><span className="tag">{p.tag}</span></>}
           </button>
         ))}
-      </div>
+      </details>
       <div className="rail-spacer" />
       <div className="rail-foot">
         {env ? <>Agent online · {env.rag === "pgvector" ? "pgvector RAG" : "keyword RAG"}<br />models: {env.real_models ? "Claude + OpenAI" : "heuristic (dev)"}</>
