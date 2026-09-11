@@ -24,10 +24,11 @@ export default function Login({ onLogin }: { onLogin: (u: AuthUser) => void }) {
 
   return (
     <div className="login-shell">
-      <div className="login-card">
+      <section className="login-story" aria-label="About Sentinel"><div className="story-wordmark"><IconShield /> Sentinel</div><span className="story-eyebrow">Senior-care procurement, considered.</span><h2>Better care starts with better decisions.</h2><p>Bring sourcing, compliance, and budget planning together. Give your team a clear path from request to review.</p><div className="story-workflow"><div><span>01</span><b>Source with confidence</b></div><div><span>02</span><b>Verify with cited evidence</b></div><div><span>03</span><b>Keep people in the decision</b></div></div><div className="story-footer">Built by Ethan Jones · <a href="https://ethanjgithub.github.io/">Explore the portfolio ↗</a></div></section>
+      <div className="login-right"><div className="login-card">
         <div className="login-brand">
           <span className="logo"><IconShield /></span>
-          <div><h1>Sentinel</h1><div className="sub">Procurement &amp; Compliance Copilot</div></div>
+          <div><h1>Welcome to your workspace.</h1><div className="sub">Procurement &amp; compliance for senior care</div></div>
         </div>
         <p className="login-lead">Sign in to the operator console. Access is role-based — only
           <b> approvers</b> may place orders (the regulated human-in-the-loop gate).</p>
@@ -59,7 +60,7 @@ export default function Login({ onLogin }: { onLogin: (u: AuthUser) => void }) {
           ))}
         </div>
       </div>
-      <div className="login-foot">JWT + RBAC · passwords hashed (PBKDF2-SHA256) · $0 free-tier build</div>
+      <div className="login-foot">Demo workspace · Representative catalog and public regulation references</div></div>
     </div>
   );
 }
