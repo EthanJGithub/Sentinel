@@ -139,6 +139,13 @@ function Console({ user, onLogout }: { user: AuthUser; onLogout: () => void }) {
 function Rail({ env, onPreset, view, setView, pending }:
   { env: any; onPreset: (p: typeof PRESETS[number]) => void;
     view: "compose" | "queue"; setView: (v: "compose" | "queue") => void; pending: number }) {
+  const [compact, setCompact] = useState(() => matchMedia('(max-width:899px)').matches);
+  useEffect(() => {
+    const media = matchMedia('(max-width:899px)');
+    const update = () => setCompact(media.matches);
+    media.addEventListener('change', update);
+    return () => media.removeEventListener('change', update);
+  }, []);
   return (
     <aside className="rail">
       <div className="brand">
@@ -155,13 +162,13 @@ function Rail({ env, onPreset, view, setView, pending }:
           {pending > 0 && <span className="nav-badge">{pending}</span>}
         </button>
       </div>
-      <details className="rail-section rail-details" open={window.innerWidth > 800}>
+      <details className="rail-section rail-details" open={!compact}>
         <summary>Facility</summary>
         <div className="rail-field"><label>Provider</label><div className="val">Cedarwood Senior Living</div></div>
         <div className="rail-field"><label>State · Care type</label><div className="val">NC · Memory care</div></div>
         <div className="rail-field"><label>GPO contract</label><div className="val">Direct Supply DSSI</div></div>
       </details>
-      <details className="rail-section rail-details" open={window.innerWidth > 800}>
+      <details className="rail-section rail-details" open={!compact}>
         <summary>Scenarios</summary>
         {PRESETS.map((p) => (
           <button key={p.label} className={`preset${p.danger ? " danger" : ""}`} onClick={() => onPreset(p)}>
