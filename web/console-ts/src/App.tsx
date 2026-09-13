@@ -178,7 +178,7 @@ function Rail({ env, onPreset, view, setView, pending }:
       </details>
       <div className="rail-spacer" />
       <div className="rail-foot">
-        {env ? <>Agent online · {env.rag === "pgvector" ? "pgvector RAG" : "keyword RAG"}<br />models: {env.real_models ? "Claude + OpenAI" : "heuristic (dev)"}</>
+        {env ? <>Agent online · {env.rag === "pgvector" ? "pgvector RAG" : "keyword RAG"}<br />models: {env.active_models ? [...new Set(Object.values(env.active_models))].join(" ? ") : env.real_models ? "Model provider configured" : "heuristic"}</>
              : "Agent offline · sample mode"}
       </div>
     </aside>
@@ -197,7 +197,7 @@ function TopBar({ req, env, offline, user, onLogout }:
         <div className="crumbs">New care wing · {req.care_type.replace("_", " ")} · budget {usd(req.budget_usd)}</div>
       </div>
       <div className="spacer" />
-      <span className="env-chip">{offline ? "offline sample" : env ? (env.real_models ? "PROVIDER=demo (Claude+OpenAI)" : "PROVIDER=dev (free)") : "connecting…"}</span>
+      <span className="env-chip">{offline ? "offline sample" : env ? (env.real_models ? "MODEL PROVIDER CONFIGURED" : "HEURISTIC MODE") : "connecting…"}</span>
       <div className="user-box">
         <div className="user-meta">
           <span className="user-name">{user.name}</span>
@@ -237,7 +237,7 @@ function Composer({ req, setReq, run, running }: any) {
             </select></div>
           <div className="field" style={{ marginLeft: "auto" }}><label>&nbsp;</label>
             <button className="btn btn-primary" onClick={run} disabled={running}>
-              {running ? <><span className="spinner" />Running agents…</> : "Generate compliant plan"}</button></div>
+              {running ? <><span className="spinner" />Running agents…</> : "Generate plan for review"}</button></div>
         </div>
         {running && (
           <div className="banner-note" style={{ marginTop: 12 }}>

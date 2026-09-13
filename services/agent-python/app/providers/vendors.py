@@ -54,14 +54,13 @@ class OpenAIProvider:
 
 
 class GroqProvider:
-    """Groq's free tier, OpenAI-compatible API (same client as fintech siblings
-    CredAgent/FraudPulse). Used as the $0 'real model' path — genuine LLM reasoning
-    with no per-token cost, instead of the deterministic heuristic fallback."""
+    """Groq transport uses the required httpx dependency, without an optional SDK."""
     name = "groq"
 
     def __init__(self, api_key: str):
-        import openai  # Groq speaks the OpenAI chat-completions wire format
-        self._client = openai.OpenAI(api_key=api_key, base_url="https://api.groq.com/openai/v1")
+        import httpx
+        self._client = httpx.Client(base_url="https://api.groq.com/openai/v1/",
+                                    headers={"Authorization": f"Bearer {api_key}"}, timeout=30)
 
     def complete(self, *, system: str, prompt: str, model: str,
                  json_mode: bool = False, max_tokens: int = 1024) -> LLMResponse:
@@ -70,12 +69,14 @@ class GroqProvider:
                                {"role": "user", "content": prompt}]}
         if json_mode:
             kwargs["response_format"] = {"type": "json_object"}
-        resp = self._client.chat.completions.create(**kwargs)
-        text = resp.choices[0].message.content or ""
-        u = resp.usage
+        response = self._client.post("chat/completions", json=kwargs)
+        response.raise_for_status()
+        payload = response.json()
+        text = payload["choices"][0]["message"].get("content") or ""
+        usage = payload.get("usage", {})
         return LLMResponse(text=text, model=model,
-                           tokens_in=getattr(u, "prompt_tokens", approx_tokens(system, prompt)),
-                           tokens_out=getattr(u, "completion_tokens", approx_tokens(text)), raw=resp)
+                           tokens_in=usage.get("prompt_tokens", approx_tokens(system, prompt)),
+                           tokens_out=usage.get("completion_tokens", approx_tokens(text)), raw=payload)
 
 
 class HeuristicProvider:

@@ -21,6 +21,8 @@ RUNS: dict[str, PlanResult] = {}
 def run_plan(req: PlanRequest, on_event: Optional[Callable] = None,
              user_email: Optional[str] = None, tenant_id: str = "cedarwood") -> PlanResult:
     settings = get_settings()
+    if settings.database_url and not get_store().enabled:
+        raise RuntimeError("Configured persistence is unavailable; no plan was created")
     meter = CostMeter(ceiling_usd=settings.per_request_cost_ceiling_usd)
     if on_event:
         meter.on_event(on_event)
@@ -51,12 +53,15 @@ def run_plan(req: PlanRequest, on_event: Optional[Callable] = None,
         violations=sum(1 for f in findings if f.verdict == "VIOLATION"),
     )
     result.metrics["tenant_id"] = tenant_id
-    RUNS[plan_id] = result
+    result.metrics["persistence"] = "postgres" if get_store().enabled else "in-memory"
     # durable persistence (Postgres when configured; no-op offline)
     try:
         get_store().save_run(json.loads(result.model_dump_json()), user_email, tenant_id)
     except Exception:
-        pass
+        if settings.database_url:
+            raise RuntimeError("Plan could not be persisted; approval is unavailable") from None
+    result.metrics["persistence"] = "postgres" if get_store().enabled else "in-memory"
+    RUNS[plan_id] = result
     # observability: metrics + structured log + Langfuse export
     try:
         from .observability import record_run as _obs_record

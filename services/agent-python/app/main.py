@@ -73,8 +73,10 @@ async def guard(request: Request, call_next):
 # ---------------------------------------------------------------------------
 @app.get("/health")
 def health():
+    from .providers import ModelRouter
+    router = ModelRouter(settings)
     return {"status": "ok", "service": "agent-python", "provider_mode": settings.provider_mode,
-            "real_models": settings.has_anthropic, "catalog": "remote" if settings.catalog_url else "local-json",
+            "real_models": router.using_real_models, "active_models": router.active_models(), "catalog": "remote" if settings.catalog_url else "local-json",
             "rag": "pgvector" if (settings.database_url and settings.has_openai) else "local-keyword",
             "persistence": "postgres" if get_store().enabled else "in-memory",
             "auth": "jwt+rbac", "multi_tenant": True,
